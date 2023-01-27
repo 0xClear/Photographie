@@ -1,0 +1,148 @@
+
+
+ .header{
+    height: 35rem;
+    min-height: calc(13rem + 32vw);
+    overflow: hidden;
+    position: relative;
+
+    /*1200px oder schmaler */
+    @media (max-width: 75em) {
+        height: calc(18rem + 32vw);
+        
+    }
+}
+
+.header__slop{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 10vw;
+    background-image: linear-gradient(-5.71deg, #fff 49.9%, transparent 50.1%);
+    background-size: 100vw 10vw;
+    background-repeat: no-repeat;
+    background-position: center 100%;
+    z-index: 1;
+}
+
+/** 992px oder schmaler */
+
+
+.header__container{
+    position: relative;
+}
+.header::before,
+.header::after{
+    content: "";
+    position: absolute;
+    width: 100vw;
+    bottom: -10rem;
+
+    background-repeat: no-repeat;
+    background-position: center  bottom;
+    background-size: 100% auto;
+
+    /** 1200px oder schmaler */
+    @media (max-width: 75em) {
+        bottom: -4rem;
+    }
+}
+
+ .header::before{
+    top: 0;
+    background-image: url(../assets/images/A_HeaderMountain02.png);
+ }
+
+ .header::after{
+    height: 33vw;
+    background-image: url(../assets/images/A_HeaderMountain01.png);
+ }
+
+ /** 992px oder schmaler */
+@media (max-width:62em) {
+    .header::after{
+        bottom: 4rem;
+    }
+    .header::before{
+        bottom: -1rem;
+        background-size: cover;
+    }
+}
+@media (max-width:36em) {
+    .header::before{
+        background-size: cover;
+    }
+    .header::after{
+        display: none;
+    }
+}
+
+
+.header__heading_container{
+    clear: both;
+}
+.header__heading_main{
+    padding-top: 15rem;
+    font-size: 7rem;
+    text-align: center;
+    line-height: 85%;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0 0 0.3rem black;
+
+    animation-name: header__animation;
+    animation-delay: 0.75s;
+    animation-duration: 2s;
+
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+
+    /** 992px oder schmaler */
+    @media (max-width:62em) {
+        font-size: 5rem;
+        line-height: 90%;
+        padding-top: 3.5rem;
+    }
+
+    @media (max-width:48em) {
+        font-size: 2.4rem;
+        line-height: 90%;
+        padding-top: 3.5rem;
+    }
+}
+/*header animation */
+@keyframes header__animation {
+    0%{
+        font-weight: 400;
+        opacity: 0;
+    }
+    50%{
+        font-weight: 700;
+        color: rgb(204, 200, 200);
+    }
+    100%{
+        font-weight: 900;
+        color: #fff;
+    }
+}
+
+.header__heading_sub{
+    margin-top: 1rem;
+    font-size: 1.75rem;
+    text-align: center;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0 0 0.1rem rgb(31, 11, 11);
+
+    z-index: 1;
+    position: relative;
+}
+@media (max-width:48em) {
+    .header__heading_sub{
+        font-size: 1rem;
+        letter-spacing: 0.5rem;
+        text-shadow: 2px 2px black;
+    }
+}
