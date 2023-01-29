@@ -27,8 +27,18 @@ html {
 .container {
   max-width: 75rem;
   margin: 0px auto;
+  padding: 0 2rem;
 }
 
+/** Breakpoints */
+/*Larg*/
+/*medium*/
+/*small*/
+/*extra small*/
+/** 1200px oder schmaler */
+/** 992px oder schmaler */
+/** 768px oder schmaler */
+/** 576px oder schmaler */
 .header {
   height: 35rem;
   min-height: calc(13rem + 32vw);
@@ -137,6 +147,11 @@ html {
     font-size: 2.4rem;
     line-height: 90%;
     padding-top: 3.5rem;
+    animation-name: header_animation_small;
+    animation-delay: 0.1s;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
   }
 }
 
@@ -174,18 +189,38 @@ html {
     text-shadow: 2px 2px black;
   }
 }
+@keyframes header_animation_small {
+  0% {
+    font-weight: 200;
+    opacity: 0;
+  }
+  50% {
+    font-weight: 600;
+    color: rgba(230, 236, 168, 0.8470588235);
+    opacity: 10%;
+  }
+  80% {
+    font-weight: 700;
+    color: #b1cce2;
+    opacity: 80%;
+  }
+  100% {
+    font-weight: 900;
+    color: #c2cad3;
+    opacity: 100%;
+  }
+}
 .navigation__list_items {
   list-style-type: none;
   display: block;
   float: left;
 }
-
-/** 768px oder schmaler */
 @media (max-width: 62em) {
   .navigation__list_items--mobile-hidden {
     display: none;
   }
 }
+
 .navigation__list_items_link {
   color: rgb(255, 255, 255);
   text-decoration: none;
@@ -197,7 +232,6 @@ html {
   text-shadow: 0 0 0.4rem black;
   letter-spacing: 0.1rem;
 }
-
 .navigation__list_items_link:hover {
   border-bottom: 0.21rem solid rgba(36, 255, 218, 0.925);
 }
@@ -213,8 +247,9 @@ html {
 
 .navigation__list_items_link-logo {
   margin-top: 1rem;
+  margin-left: 0;
+  padding-left: 0;
 }
-
 .navigation__list_items_link-logo:hover {
   border-bottom: none;
 }
@@ -225,17 +260,31 @@ html {
 }
 
 .navigation_list_items--menu .navigation__list_items_link {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+  margin-right: 0;
+  padding-right: 0;
 }
-
 .navigation_list_items--menu .navigation__list_items_link:hover {
   border-bottom: none;
 }
 
-/** Breakpoints */
-/** 1200px oder schmaler */
-/** 992px oder schmaler */
-/** 768px oder schmaler */
-/** 576px oder schmaler */
+.motivation {
+  margin-top: 2rem;
+}
+
+.motivation__column-text {
+  float: left;
+  width: 33%;
+}
+
+.motivation__column-images {
+  float: left;
+  width: 66%;
+}
+
+.motivation__image {
+  max-width: 50%;
+  margin-left: 25%;
+}
 
 /*# sourceMappingURL=main.css.map */

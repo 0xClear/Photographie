@@ -1,5 +1,4 @@
-
-
+@use "../abstracts/" as *;
  .header{
     height: 35rem;
     min-height: calc(13rem + 32vw);
@@ -7,7 +6,7 @@
     position: relative;
 
     /*1200px oder schmaler */
-    @media (max-width: 75em) {
+    @media (max-width: $breakpoint-lg) {
         height: calc(18rem + 32vw);
         
     }
@@ -44,10 +43,12 @@
     background-size: 100% auto;
 
     /** 1200px oder schmaler */
-    @media (max-width: 75em) {
+    @media (max-width: $breakpoint-lg) {
         bottom: -4rem;
     }
 }
+
+$image-path: "../assets/images";
 
  .header::before{
     top: 0;
@@ -60,7 +61,7 @@
  }
 
  /** 992px oder schmaler */
-@media (max-width:62em) {
+@media (max-width: $breakpoint-md) {
     .header::after{
         bottom: 4rem;
     }
@@ -69,7 +70,7 @@
         background-size: cover;
     }
 }
-@media (max-width:36em) {
+@media (max-width: $breakpoint-xs) {
     .header::before{
         background-size: cover;
     }
@@ -99,16 +100,22 @@
     animation-fill-mode: both;
 
     /** 992px oder schmaler */
-    @media (max-width:62em) {
+    @media (max-width: $breakpoint-md) {
         font-size: 5rem;
         line-height: 90%;
         padding-top: 3.5rem;
     }
 
-    @media (max-width:48em) {
+    @media (max-width: $breakpoint-sm) {
         font-size: 2.4rem;
         line-height: 90%;
         padding-top: 3.5rem;
+
+        animation-name: header_animation_small;
+        animation-delay: 0.1s;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: both;
     }
 }
 /*header animation */
@@ -139,10 +146,33 @@
     z-index: 1;
     position: relative;
 }
-@media (max-width:48em) {
+@media (max-width: $breakpoint-sm) {
     .header__heading_sub{
         font-size: 1rem;
         letter-spacing: 0.5rem;
         text-shadow: 2px 2px black;
     }
+}
+
+@keyframes header_animation_small {
+    0%{
+        font-weight: 200;
+        opacity: 0;
+    }
+    50%{
+        font-weight: 600;
+        color: #e6eca8d8;
+        opacity: 10%;
+    }
+    80%{
+        font-weight: 700;
+        color: #b1cce2;
+        opacity: 80%;
+    }
+    100%{
+        font-weight: 900;
+        color: #c2cad3;
+        opacity: 100%;
+    }
+
 }
