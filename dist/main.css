@@ -38,6 +38,11 @@ html {
   margin: 0px auto;
   padding: 0 2rem;
 }
+.container::after {
+  display: block;
+  content: "";
+  clear: both;
+}
 @media (max-width: 36em) {
   .container {
     padding: 0 1rem;
@@ -304,6 +309,7 @@ html {
 .motivation__column-images {
   float: left;
   width: 66%;
+  height: clamp(10rem, 35vw + 10rem, 36rem);
   position: relative;
 }
 
@@ -316,6 +322,9 @@ html {
   width: 50%;
   box-shadow: 0 0 1rem rgb(58, 56, 56);
   box-sizing: content-box;
+  filter: grayscale(50%);
+  transition: filter ease-in-out 0.3s, transform ease-in-out 0.3s;
+  transform: scale(1);
 }
 .motivation__image--second {
   right: 0rem;
@@ -349,6 +358,8 @@ html {
   left: calc(40% - 0.66rem);
 }
 .motivation__image:hover {
+  transform: scale(1.2);
+  filter: grayscale(0%);
   border: 0.33rem solid rgba(36, 255, 218, 0.925);
   padding: 0.33rem;
   z-index: 10;

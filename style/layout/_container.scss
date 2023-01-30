@@ -5,6 +5,8 @@
     margin: 0px auto;
     padding: 0 2rem;
 
+    @include clearfix;
+
     @media (max-width: $breakpoint-xs) {
         padding: 0 1rem;
     }

@@ -34,6 +34,8 @@
 .motivation__column-images {
     float: left;
     width: 66%;
+    //max heigh and min -heigh  whit clamp: (min-heigh: 10rem, max-heigh: 36rem; )
+    height: clamp(10rem, calc(35vw + 10rem), 36rem);
     position: relative;
 
 }
@@ -58,6 +60,9 @@
     width: 50%;
     box-shadow: 0 0 1rem rgb(58, 56, 56);
     box-sizing: content-box;
+    filter: grayscale(50%);
+    transition: filter ease-in-out 0.3s, transform ease-in-out 0.3s;
+    transform: scale(1);
 
     &--second {
         right: 0rem;
@@ -80,6 +85,8 @@
         @include motivation__image-position(5rem, 40%);
     }
     &:hover{
+        transform: scale(1.2);
+        filter: grayscale(0%);
         border: $motivation-hover;
         padding: 0.33rem;
         z-index: 10;
