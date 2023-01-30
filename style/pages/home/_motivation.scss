@@ -1,17 +1,87 @@
-.motivation{
+@use "../../abstracts" as *;
+
+.motivation {
     margin-top: 2rem;
+
+    &__text {
+        color: $color-secoundary;
+        margin-top: 0.5rem;
+        font-size: 400;
+        font-family: georgia;
+
+        &-heading {
+            margin-top: 4rem;
+            color: $color-secoundary;
+            font-weight: 600;
+
+            &::before {
+                content: "";
+                width: 4rem;
+                height: 0.3rem;
+                background-color: $color-secoundary-light;
+                display: block;
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
 }
 
-.motivation__column-text{
+.motivation__column-text {
     float: left;
     width: 33%;
 }
-.motivation__column-images{
+
+.motivation__column-images {
     float: left;
     width: 66%;
+    position: relative;
 
 }
-.motivation__image{
-    max-width: 50%;
-    margin-left: 25%;
+
+/**
+*@param $top: Position from top (in rem)
+*@param $left: Position from left  (in % ) 
+*/
+
+@mixin motivation__image-position($top, $left){
+    top: $top;
+    left: $left;
+
+    &:hover{
+        top: $top - 0.66rem;
+        left: calc(#{$left} - 0.66rem);
+    }
+}
+
+.motivation__image {
+    position: absolute;
+    width: 50%;
+    box-shadow: 0 0 1rem rgb(58, 56, 56);
+    box-sizing: content-box;
+
+    &--second {
+        right: 0rem;
+        width: 75%;
+        z-index: 1;
+
+        @include motivation__image-position(0rem, 25%)
+    }
+
+    &--third {
+        width: 33%;
+        z-index: 2;
+
+        @include motivation__image-position(10rem, 10% )
+    }
+
+    &--first {
+        width: 42%;
+        z-index: 3;
+        @include motivation__image-position(5rem, 40%);
+    }
+    &:hover{
+        border: $motivation-hover;
+        padding: 0.33rem;
+        z-index: 10;
+    }
 }

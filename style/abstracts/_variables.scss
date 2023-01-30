@@ -1,4 +1,6 @@
 $color-primary: rgba(36, 255, 218, 0.925)!default;
+$color-secoundary: #3d627a!default;
+$color-secoundary-light: #2685c5!default;
 
 /** Breakpoints */
 /*Larg*/
@@ -19,3 +21,5 @@ $breakpoint-xs: 36em!default;
  @media (max-width: $breakpoint-sm) {}
 /** 576px oder schmaler */
 @media (max-width: $breakpoint-xs) {}
+
+$motivation-hover: 0.33rem solid $color-primary;
