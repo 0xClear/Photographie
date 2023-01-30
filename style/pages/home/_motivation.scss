@@ -1,5 +1,8 @@
 @use "../../abstracts" as *;
 
+$-motivation__image-hover-padding: 0.33rem;
+$-motivation__image-hover-border: 0.33rem;
+
 .motivation {
     margin-top: 2rem;
 
@@ -49,9 +52,11 @@
     top: $top;
     left: $left;
 
+    $border-plus_padding: $-motivation__image-hover-border + $-motivation__image-hover-padding;
+
     &:hover{
-        top: $top - 0.66rem;
-        left: calc(#{$left} - 0.66rem);
+        top: $top - $border-plus_padding;
+        left: calc(#{$left} - #{$border-plus_padding});
     }
 }
 
@@ -87,8 +92,8 @@
     &:hover{
         transform: scale(1.2);
         filter: grayscale(0%);
-        border: $motivation-hover;
-        padding: 0.33rem;
+        border: $-motivation__image-hover-border solid $color-primary;
+        padding: $-motivation__image-hover-padding;
         z-index: 10;
     }
 }
