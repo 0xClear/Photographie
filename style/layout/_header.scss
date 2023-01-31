@@ -1,5 +1,6 @@
 @use "../abstracts/" as *;
- .header{
+
+.header {
     height: 35rem;
     min-height: calc(13rem + 32vw);
     overflow: hidden;
@@ -8,11 +9,11 @@
     /*1200px oder schmaler */
     @media (max-width: $breakpoint-lg) {
         height: calc(18rem + 32vw);
-        
+
     }
 }
 
-.header__slop{
+.header__slop {
     position: absolute;
     left: 0;
     right: 0;
@@ -28,18 +29,19 @@
 /** 992px oder schmaler */
 
 
-.header__container{
+.header__container {
     position: relative;
 }
+
 .header::before,
-.header::after{
+.header::after {
     content: "";
     position: absolute;
     width: 100vw;
     bottom: -10rem;
 
     background-repeat: no-repeat;
-    background-position: center  bottom;
+    background-position: center bottom;
     background-size: 100% auto;
 
     /** 1200px oder schmaler */
@@ -50,40 +52,44 @@
 
 $image-path: "../assets/images";
 
- .header::before{
+.header::before {
     top: 0;
     background-image: url(../assets/images/A_HeaderMountain02.png);
- }
+}
 
- .header::after{
+.header::after {
     height: 33vw;
     background-image: url(../assets/images/A_HeaderMountain01.png);
- }
+}
 
- /** 992px oder schmaler */
+/** 992px oder schmaler */
 @media (max-width: $breakpoint-md) {
-    .header::after{
+    .header::after {
         bottom: 4rem;
     }
-    .header::before{
+
+    .header::before {
         bottom: -1rem;
         background-size: cover;
     }
 }
+
 @media (max-width: $breakpoint-xs) {
-    .header::before{
+    .header::before {
         background-size: cover;
     }
-    .header::after{
+
+    .header::after {
         display: none;
     }
 }
 
 
-.header__heading_container{
+.header__heading_container {
     clear: both;
 }
-.header__heading_main{
+
+.header__heading_main {
     padding-top: 15rem;
     font-size: 7rem;
     text-align: center;
@@ -117,24 +123,33 @@ $image-path: "../assets/images";
         animation-timing-function: ease-in-out;
         animation-fill-mode: both;
     }
+
+    @media (max-width: $breakpoint-xs) {
+        font-size: 2.2rem;
+        line-height: 90%;
+        padding-top: 3.5rem;
+    }
 }
+
 /*header animation */
 @keyframes header__animation {
-    0%{
+    0% {
         font-weight: 400;
         opacity: 0;
     }
-    50%{
+
+    50% {
         font-weight: 700;
         color: rgb(204, 200, 200);
     }
-    100%{
+
+    100% {
         font-weight: 900;
         color: #fff;
     }
 }
 
-.header__heading_sub{
+.header__heading_sub {
     margin-top: 1rem;
     font-size: 1.75rem;
     text-align: center;
@@ -146,8 +161,9 @@ $image-path: "../assets/images";
     z-index: 1;
     position: relative;
 }
+
 @media (max-width: $breakpoint-sm) {
-    .header__heading_sub{
+    .header__heading_sub {
         font-size: 1rem;
         letter-spacing: 0.5rem;
         text-shadow: 2px 2px black;
@@ -155,21 +171,24 @@ $image-path: "../assets/images";
 }
 
 @keyframes header_animation_small {
-    0%{
+    0% {
         font-weight: 200;
         opacity: 0;
     }
-    50%{
+
+    50% {
         font-weight: 600;
         color: #e6eca8d8;
         opacity: 10%;
     }
-    80%{
+
+    80% {
         font-weight: 700;
         color: #b1cce2;
         opacity: 80%;
     }
-    100%{
+
+    100% {
         font-weight: 900;
         color: #c2cad3;
         opacity: 100%;

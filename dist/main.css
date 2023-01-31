@@ -164,6 +164,13 @@ html {
     animation-fill-mode: both;
   }
 }
+@media (max-width: 36em) {
+  .header__heading_main {
+    font-size: 2.2rem;
+    line-height: 90%;
+    padding-top: 3.5rem;
+  }
+}
 
 /*header animation */
 @keyframes header__animation {
@@ -292,6 +299,11 @@ html {
   color: #3d627a;
   font-weight: 600;
 }
+@media (max-width: 48em) {
+  .motivation__text-heading {
+    margin-top: 0.5rem;
+  }
+}
 .motivation__text-heading::before {
   content: "";
   width: 4rem;
@@ -300,10 +312,40 @@ html {
   display: block;
   margin-bottom: 0.5rem;
 }
+@media (max-width: 48em) {
+  .motivation__text-heading::before {
+    width: 6rem;
+    height: 0.2rem;
+    background-color: #2685c5;
+  }
+}
 
 .motivation__column-text {
   float: left;
   width: 33%;
+  padding-right: 4.5rem;
+  padding-top: 4rem;
+}
+@media (max-width: 62em) {
+  .motivation__column-text {
+    padding-right: 0.5rem;
+    padding-top: 0;
+  }
+}
+@media (max-width: 48em) {
+  .motivation__column-text {
+    width: 80%;
+    float: none;
+    padding-bottom: 3rem;
+  }
+}
+@media (max-width: 36em) {
+  .motivation__column-text {
+    margin: 0 auto;
+    float: none;
+    width: 100%;
+    padding-bottom: 3rem;
+  }
 }
 
 .motivation__column-images {
@@ -311,6 +353,26 @@ html {
   width: 66%;
   height: clamp(10rem, 35vw + 10rem, 36rem);
   position: relative;
+}
+@media (max-width: 62em) {
+  .motivation__column-images {
+    width: 67%;
+  }
+}
+@media (max-width: 48em) {
+  .motivation__column-images {
+    margin: 0 auto;
+    width: 80%;
+    float: none;
+    height: clamp(10rem, 37vw + 10rem, 36rem);
+  }
+}
+@media (max-width: 36em) {
+  .motivation__column-images {
+    width: 95%;
+    height: clamp(10rem, 41vw + 10rem, 36rem);
+    float: none;
+  }
 }
 
 /**
@@ -323,8 +385,8 @@ html {
   box-shadow: 0 0 1rem rgb(58, 56, 56);
   box-sizing: content-box;
   filter: grayscale(50%);
-  transition: filter ease-in-out 0.3s, transform ease-in-out 0.3s;
-  transform: scale(1);
+  transition: filter ease-in-out 0.2s, transform ease-in-out 0.3s;
+  transform: scale(0.9);
 }
 .motivation__image--second {
   right: 0rem;
@@ -358,7 +420,7 @@ html {
   left: calc(40% - 0.66rem);
 }
 .motivation__image:hover {
-  transform: scale(1.2);
+  transform: scale(1);
   filter: grayscale(0%);
   border: 0.33rem solid rgba(36, 255, 218, 0.925);
   padding: 0.33rem;

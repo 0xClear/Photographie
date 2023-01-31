@@ -17,6 +17,11 @@ $-motivation__image-hover-border: 0.33rem;
             color: $color-secoundary;
             font-weight: 600;
 
+
+            @media (max-width: $breakpoint-sm) {
+                margin-top: 0.5rem;
+            }
+
             &::before {
                 content: "";
                 width: 4rem;
@@ -24,6 +29,12 @@ $-motivation__image-hover-border: 0.33rem;
                 background-color: $color-secoundary-light;
                 display: block;
                 margin-bottom: 0.5rem;
+
+                @media (max-width: $breakpoint-sm) {
+                    width: 6rem;
+                    height: 0.2rem;
+                    background-color:  $color-secoundary-light;
+                }
             }
         }
     }
@@ -32,6 +43,24 @@ $-motivation__image-hover-border: 0.33rem;
 .motivation__column-text {
     float: left;
     width: 33%;
+    padding-right: 4.5rem;
+    padding-top: 4rem;
+
+    @media (max-width: $breakpoint-md) {
+        padding-right: 0.5rem;
+        padding-top: 0;       
+    }
+    @media (max-width: $breakpoint-sm) {
+        width: 80%;
+        float: none;
+        padding-bottom: 3rem;
+    }
+    @media (max-width:$breakpoint-xs) {
+        margin: 0 auto;
+        float: none;
+        width: 100%;
+        padding-bottom: 3rem;
+    }
 }
 
 .motivation__column-images {
@@ -40,6 +69,21 @@ $-motivation__image-hover-border: 0.33rem;
     //max heigh and min -heigh  whit clamp: (min-heigh: 10rem, max-heigh: 36rem; )
     height: clamp(10rem, calc(35vw + 10rem), 36rem);
     position: relative;
+
+    @media (max-width: $breakpoint-md) {
+        width: 67%;
+    }
+    @media (max-width: $breakpoint-sm) {
+        margin: 0 auto;
+        width: 80%;
+        float: none;
+        height: clamp(10rem, calc(37vw + 10rem), 36rem);
+    }
+    @media (max-width: $breakpoint-xs) {
+        width: 95%;
+        height: clamp(10rem, calc(41vw + 10rem), 36rem);
+        float: none;
+    }
 
 }
 
@@ -66,8 +110,8 @@ $-motivation__image-hover-border: 0.33rem;
     box-shadow: 0 0 1rem rgb(58, 56, 56);
     box-sizing: content-box;
     filter: grayscale(50%);
-    transition: filter ease-in-out 0.3s, transform ease-in-out 0.3s;
-    transform: scale(1);
+    transition: filter ease-in-out 0.2s, transform ease-in-out 0.3s;
+    transform: scale(0.9);
 
     &--second {
         right: 0rem;
@@ -90,7 +134,7 @@ $-motivation__image-hover-border: 0.33rem;
         @include motivation__image-position(5rem, 40%);
     }
     &:hover{
-        transform: scale(1.2);
+        transform: scale(1);
         filter: grayscale(0%);
         border: $-motivation__image-hover-border solid $color-primary;
         padding: $-motivation__image-hover-padding;
