@@ -1,0 +1,15 @@
+@use "../../abstracts" as *;
+
+$-tours-background-color: $color-secoundary-dark;
+
+.tours {
+  background-color: $-tours-background-color;
+}
+
+.tours-heading {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.5rem;
+  text-align: center;
+}

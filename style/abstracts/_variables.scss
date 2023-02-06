@@ -1,25 +1,31 @@
-$color-primary: rgba(36, 255, 218, 0.925)!default;
-$color-secoundary: #3d627a!default;
-$color-secoundary-light: #2685c5!default;
+@use "sass:color";
 
+$color-primary: rgba(36, 255, 218, 0.925) !default;
+$color-secoundary: #3d627a !default;
+$color-secoundary-light: #2685c5 !default;
+$color-secoundary-dark: #011820 !default;
 /** Breakpoints */
 /*Larg*/
-$breakpoint-lg: 75em!default;
+$breakpoint-lg: 75em !default;
 /*medium*/
-$breakpoint-md: 62em!default;
+$breakpoint-md: 62em !default;
 /*small*/
-$breakpoint-sm: 48em!default;
+$breakpoint-sm: 48em !default;
 /*extra small*/
-$breakpoint-xs: 36em!default;
-
+$breakpoint-xs: 36em !default;
 
 /** 1200px oder schmaler */
-@media (max-width: $breakpoint-lg) {}
+@media (max-width: $breakpoint-lg) {
+}
 /** 992px oder schmaler */
-@media (max-width: $breakpoint-md) {}
+@media (max-width: $breakpoint-md) {
+}
 /** 768px oder schmaler */
- @media (max-width: $breakpoint-sm) {}
+@media (max-width: $breakpoint-sm) {
+}
 /** 576px oder schmaler */
-@media (max-width: $breakpoint-xs) {}
+@media (max-width: $breakpoint-xs) {
+}
 
 $motivation-hover: 0.33rem solid $color-primary;
+

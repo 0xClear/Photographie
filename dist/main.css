@@ -427,4 +427,16 @@ html {
   z-index: 10;
 }
 
+.tours {
+  background-color: #011820;
+}
+
+.tours-heading {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.5rem;
+  text-align: center;
+}
+
 /*# sourceMappingURL=main.css.map */
