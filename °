@@ -4,27 +4,16 @@ $-tours-background-color: $color-secoundary-dark;
 
 .tours {
   position: relative;
-  height: 30rem;
+  height: 10rem;
   background-color: $-tours-background-color;
 }
 
-.tours::before,
-.tours::after {
-  top: 0;
+.tours::before {
   position: absolute;
   content: "Your Content";
   text-transform: uppercase;
   color: $-tours-background-color;
-  font-size: 6rem;
-}
-
-.tours::before {
-  -webkit-text-stroke: 1px #fff;
-  text-stroke: 1px #fff;
-}
-.tours::after {
-  -webkit-text-stroke: 1px transparent;
-  text-stroke: 1px transparent;
+  font-size: 10rem;
 }
 
 .tours-heading {

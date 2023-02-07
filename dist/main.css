@@ -428,15 +428,40 @@ html {
 }
 
 .tours {
+  position: relative;
+  height: 30rem;
   background-color: #011820;
+}
+
+.tours::before,
+.tours::after {
+  top: 0;
+  position: absolute;
+  content: "Your Content";
+  text-transform: uppercase;
+  color: #011820;
+  font-size: 6rem;
+}
+
+.tours::before {
+  -webkit-text-stroke: 1px #fff;
+  text-stroke: 1px #fff;
+}
+
+.tours::after {
+  -webkit-text-stroke: 1px transparent;
+  text-stroke: 1px transparent;
 }
 
 .tours-heading {
   color: #fff;
   text-transform: uppercase;
   font-weight: 500;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.3rem;
   text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  font-size: 2rem;
 }
 
 /*# sourceMappingURL=main.css.map */
