@@ -239,7 +239,7 @@ html {
 }
 
 .navigation__list_items_link {
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   text-decoration: none;
   padding: 0.5rem 0.25rem 0.25rem 0.25rem;
   margin-left: 2rem;
@@ -433,18 +433,38 @@ html {
   background-color: #011820;
 }
 
-.tours::before,
-.tours::after {
-  top: 0;
+.tours::after, .tours::before {
+  left: 0;
+  right: 0;
+  text-align: center;
+  bottom: 0;
   position: absolute;
-  content: "Your Content";
+  content: " Development Area";
   text-transform: uppercase;
   color: #011820;
-  font-size: 6rem;
+  font-size: 4rem;
+  font-weight: 900;
+  text-shadow: 0 0 1px rgb(192, 20, 20);
+}
+
+@supports (-webkit-text-stroke: 1px rgba(135, 96, 209, 0.5764705882)) or (stroke: 1px rgba(135, 96, 209, 0.5764705882)) {
+  .tours::before {
+    -webkit-text-stroke: 1px transparent;
+    text-stroke: 1px transparent;
+    text-shadow: none;
+  }
+}
+
+@supports (-webkit-text-stroke: 1px rgba(135, 96, 209, 0.5764705882)) or (stroke: 1px rgba(135, 96, 209, 0.5764705882)) {
+  .tours::after {
+    -webkit-text-stroke: 1px rgba(135, 96, 209, 0.5764705882);
+    text-stroke: 1px #fff;
+    text-shadow: none;
+  }
 }
 
 .tours::before {
-  -webkit-text-stroke: 1px #fff;
+  -webkit-text-stroke: 1px rgba(135, 96, 209, 0.5764705882);
   text-stroke: 1px #fff;
 }
 
