@@ -1,10 +1,23 @@
+@use "./variables" as *;
+
 
 // Mixin itself
 @mixin clearfix() {
-    &::after {
-      display: block;
-      content: "";
-      clear: both;
-    }
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
   }
-  
+}
+
+@mixin make-container() {
+  max-width: 75rem;
+  margin: 0px auto;
+  padding: 0 2rem;
+
+  @include clearfix;
+
+  @media (max-width: $breakpoint-xs) {
+    padding: 0 1rem;
+  }
+}

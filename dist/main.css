@@ -78,6 +78,19 @@ html {
 /** 992px oder schmaler */
 .header__container {
   position: relative;
+  max-width: 75rem;
+  margin: 0px auto;
+  padding: 0 2rem;
+}
+.header__container::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+@media (max-width: 36em) {
+  .header__container {
+    padding: 0 1rem;
+  }
 }
 
 .header::before,
@@ -429,8 +442,8 @@ html {
 
 .tours {
   position: relative;
-  height: 30rem;
   background-color: #011820;
+  padding-bottom: 5rem;
 }
 
 .tours::after, .tours::before {
@@ -438,13 +451,14 @@ html {
   right: 0;
   text-align: center;
   bottom: 0;
+  width: 100%;
   position: absolute;
   content: " Development Area";
   text-transform: uppercase;
   color: #011820;
   font-size: 4rem;
-  font-weight: 900;
-  text-shadow: 0 0 1px rgb(192, 20, 20);
+  font-weight: bold;
+  text-shadow: 0 0 1px rgb(255, 255, 255);
 }
 
 @supports (-webkit-text-stroke: 1px rgba(135, 96, 209, 0.5764705882)) or (stroke: 1px rgba(135, 96, 209, 0.5764705882)) {
@@ -464,13 +478,31 @@ html {
 }
 
 .tours::before {
-  -webkit-text-stroke: 1px rgba(135, 96, 209, 0.5764705882);
+  -webkit-text-stroke: 1px rgba(120, 96, 209, 0.5764705882);
   text-stroke: 1px #fff;
 }
 
 .tours::after {
   -webkit-text-stroke: 1px transparent;
   text-stroke: 1px transparent;
+}
+
+.tours__container {
+  position: relative;
+  z-index: 1;
+  max-width: 75rem;
+  margin: 0px auto;
+  padding: 0 2rem;
+}
+.tours__container::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+@media (max-width: 36em) {
+  .tours__container {
+    padding: 0 1rem;
+  }
 }
 
 .tours-heading {
@@ -482,6 +514,46 @@ html {
   padding-top: 3rem;
   padding-bottom: 3rem;
   font-size: 2rem;
+}
+
+/*tours card */
+.tours__cards {
+  display: flex;
+}
+
+.tours__card {
+  width: 20%;
+  position: relative;
+  height: 20rem;
+  overflow: hidden;
+}
+
+.tours__card-img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.tours__card-content {
+  position: absloute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+/* cards icon */
+.tours__cards-icon-container {
+  background-color: rgba(36, 255, 218, 0.925);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.tours__card-icon {
+  display: block;
+  width: 4rem;
+  color: #fff;
 }
 
 /*# sourceMappingURL=main.css.map */
