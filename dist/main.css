@@ -19,7 +19,7 @@ html {
 
 .icon {
   fill: currentColor;
-  height: 2rem;
+  height: 2em;
   vertical-align: middle;
   position: relative;
 }
@@ -469,7 +469,7 @@ html {
   }
 }
 
-@supports (-webkit-text-stroke: 1px rgba(135, 96, 209, 0.5764705882)) or (stroke: 1px rgba(135, 96, 209, 0.5764705882)) {
+@supports (-webkit-text-stroke: 1px rgba(13, 255, 94, 0.5764705882)) or (stroke: 1px rgba(135, 96, 209, 0.5764705882)) {
   .tours::after {
     -webkit-text-stroke: 1px rgba(135, 96, 209, 0.5764705882);
     text-stroke: 1px #fff;
@@ -478,7 +478,7 @@ html {
 }
 
 .tours::before {
-  -webkit-text-stroke: 1px rgba(120, 96, 209, 0.5764705882);
+  -webkit-text-stroke: 1px rgba(5, 255, 130, 0.1294117647);
   text-stroke: 1px #fff;
 }
 
@@ -533,18 +533,56 @@ html {
   position: absolute;
   top: 0;
   left: 0;
+  filter: brightness(99%);
 }
 
 .tours__card-content {
-  position: absloute;
-  top: 0;
+  position: absolute;
   left: 0;
+  right: 0;
   bottom: 0;
+  color: #fff;
+  padding: 0 1rem;
+  text-shadow: 0 0 0.32rem #000000;
+  background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.2) 20%);
+}
+
+.tours__card-heading {
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+/*Location icon*/
+.tours__card-location {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.6rem;
+  margin-bottom: 0.66rem;
+  display: flex;
+}
+
+.tours__card-description {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.6rem;
+  padding: 0.8rem 0;
+  margin-bottom: 0.8rem;
+  background-image: linear-gradient(90deg, rgba(0, 255, 98, 0.9254901961), 60%, transparent 60%);
+  background-position-y: top;
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+}
+
+.tours__card-location-text {
+  line-height: 1.4rem;
 }
 
 /* cards icon */
+.tours__card-location-icon {
+  font-size: 0.6rem;
+}
+
 .tours__cards-icon-container {
-  background-color: rgba(36, 255, 218, 0.925);
+  background-color: rgba(0, 255, 98, 0.9254901961);
   position: absolute;
   top: 0;
   left: 0;
@@ -552,7 +590,7 @@ html {
 
 .tours__card-icon {
   display: block;
-  width: 4rem;
+  width: 3rem;
   color: #fff;
 }
 
