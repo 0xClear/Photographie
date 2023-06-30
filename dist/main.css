@@ -442,13 +442,12 @@ html {
 
 .tours {
   background: #083a42;
-  height: 40rem;
   position: relative;
-  padding: 0rem 2rem;
+  padding-bottom: 5rem;
 }
 
 .tours::after, .tours::before {
-  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
   content: "Muster UI";
@@ -488,6 +487,20 @@ html {
 .tours__container {
   position: relative;
   z-index: 10;
+  /* padding variabl included from mixins */
+  max-width: 75rem;
+  margin: 0px auto;
+  padding: 0 2rem;
+}
+.tours__container::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+@media (max-width: 36em) {
+  .tours__container {
+    padding: 0 1rem;
+  }
 }
 
 .tours-heading {
@@ -499,6 +512,81 @@ html {
   font-size: 3rem;
   font-weight: 400;
   letter-spacing: 0.3rem;
+}
+
+.tours__card-icon {
+  width: 2.6rem;
+  display: block;
+  color: #1affe1;
+}
+
+.tours__cards {
+  display: flex;
+}
+
+.tours__card {
+  width: 20%;
+  position: relative;
+  height: 16rem;
+  background: #1affe1;
+  overflow: hidden;
+}
+
+.tours__cards-icon-container {
+  background-color: rgba(13, 190, 93, 0.9254901961);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.tours__card-img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: brightness(80%);
+}
+
+.tours__card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  padding: 0.7rem 0.5rem 0 0.5rem;
+  background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.25) 20%);
+}
+
+.tours__card-heading {
+  font-size: 1rem;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+
+.tours__card-location {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+  display: flex;
+}
+
+.tours__card-location-icon {
+  font-size: 0.7rem;
+}
+
+.tours__card-location-text {
+  font-size: 0.6rem;
+  font-weight: 700;
+  line-height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.tours__card-description {
+  font-size: 0.7rem;
+  background-image: linear-gradient(90deg, #2685c5 60%, transparent 60%);
+  background-position-y: top;
+  background-repeat: no-repeat;
+  background-size: 100% 0.25rem;
+  padding: 0.6rem 0rem;
 }
 
 /*# sourceMappingURL=main.css.map */
