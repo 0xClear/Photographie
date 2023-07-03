@@ -21,6 +21,9 @@ $-tours-animation-duration: 0.30s;
   font-weight: bold;
   color: $tours__background-color;
   text-shadow: 0 0 0.3px #fff;
+
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 @mixin -tours__before-and-after-stroke($color) {
@@ -53,16 +56,16 @@ $-tours-animation-duration: 0.30s;
   @include make-container();
 }
 
-.tours-heading {
+.tours-heading {        
   color: #fff;
   text-align: center;
-  padding-top: 4rem;
+  padding-top: 2rem;
   font-family: "../../../fonts/Cinzel";
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: 600;
   letter-spacing: 0.2rem;
 
-  background: linear-gradient(to right, $tours__icon-background-color, #eb0d05);
+  background: linear-gradient(to right, $tours__icon-background-color, #ac30ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -93,16 +96,21 @@ $-tours-animation-duration: 0.30s;
 
 .tours__cards {
   display: flex;
-  padding-top: 4rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
 }
 
 .tours__card {
+  /* 0 0 mean whidth and heigh are not allowed to change */
+  flex: 0 0 ( 71rem / 5);
   width: 20%;
   position: relative;
   height: 20rem;
+  margin-top: 2rem;
   overflow: hidden;
   border-radius: 0.4rem;
-  box-shadow: 0 0 0.7rem #4effe7 transparent;
+  box-shadow: 0 0 0.7rem #4effe7 transparent;  
 
   transform: scale(1);
   transition: transform $-tours-animation-duration ease-in-out,
@@ -178,6 +186,9 @@ $-tours-animation-duration: 0.30s;
   font-family: "../../../fonts/Cinzel";
   font-weight: 500;
 
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .tours__card-location {
@@ -192,10 +203,15 @@ $-tours-animation-duration: 0.30s;
 }
 
 .tours__card-location-text {
-  font-size: 0.6rem;
-  font-weight: 700;
+  font-family: Helvetica ;
+  font-size: 0.7rem;
+  font-weight: 400;
   line-height: 2rem;
   padding-left: 0.5rem;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .tours__card-description {
