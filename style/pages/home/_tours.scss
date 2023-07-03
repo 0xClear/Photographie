@@ -6,7 +6,7 @@ $-tours-animation-duration: 0.30s;
 .tours {
   background: $tours__background-color;
   position: relative;
-  padding-bottom: 5rem;
+  padding-bottom: 7rem;
 }
 
 %tours__before-and-after {
@@ -61,6 +61,10 @@ $-tours-animation-duration: 0.30s;
   font-size: 3rem;
   font-weight: 600;
   letter-spacing: 0.2rem;
+
+  background: linear-gradient(to right, $tours__icon-background-color, #eb0d05);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .tours__card-icon {
@@ -74,7 +78,7 @@ $-tours-animation-duration: 0.30s;
   top: 0;
   left: 0;
   width: 100%;
-    /* Set the initial transformation */
+  /* Set the initial transformation */
 
   transform: translate(0, 0);
 
@@ -82,7 +86,7 @@ $-tours-animation-duration: 0.30s;
   /* Apply the following styles when hovering over the parent element with the class .tours__card */
 
   .tours__card:hover & {
-       /* Move the element horizontally using a calculated value */
+    /* Move the element horizontally using a calculated value */
     transform: translate(calc(50% - 1.5rem), 0);
   }
 }
@@ -98,21 +102,30 @@ $-tours-animation-duration: 0.30s;
   height: 20rem;
   overflow: hidden;
   border-radius: 0.4rem;
+  box-shadow: 0 0 0.7rem #4effe7 transparent;
 
   transform: scale(1);
-  transition: transform $-tours-animation-duration ease-in-out;
-  box-shadow: 0 0 0.1rem #4affe7;
+  transition: transform $-tours-animation-duration ease-in-out,
+    box-shadow $-tours-animation-duration ease-in-out,
+    z-index $-tours-animation-duration linear;
+  z-index: 0;
 
-  &:hover{
+  &:hover {
     transform: scale(1.1);
+    z-index: 9999;
+    transition: transform $-tours-animation-duration ease-in-out,
+      box-shadow $-tours-animation-duration ease-in-out,
+      z-index 0s linear;
+    box-shadow: 0 0 0.25rem #1affe1;
   }
+
 
 
 
 }
 
 .tours__cards-icon-background {
-  background-color: $toures__icon-color;
+  background-color: $tours__icon-background-color;
 
   /* Position the Element */
   position: absolute;
@@ -152,7 +165,7 @@ $-tours-animation-duration: 0.30s;
   background-image: linear-gradient(180deg, transparent 0%, rgb(0, 0, 0, 0.25) 20%);
   transition: transform $-tours-animation-duration ease-in-out;
 
-  transform: translate(0, calc(100% - 4.8rem ));
+  transform: translate(0, calc(100% - 4.8rem));
 
   .tours__card:hover & {
     transform: translate(0, 0);
@@ -175,7 +188,7 @@ $-tours-animation-duration: 0.30s;
 
 .tours__card-location-icon {
   font-size: 0.7rem;
-  color: $red-color-icon;
+  color: $green-color-icon;
 }
 
 .tours__card-location-text {
@@ -187,10 +200,10 @@ $-tours-animation-duration: 0.30s;
 
 .tours__card-description {
   font-size: 0.6rem;
-  font-family: Helvetica ;
+  font-family: Helvetica;
   font-weight: 100;
 
-  background-image: linear-gradient(90deg, $red-color-icon 60%, transparent 60%);
+  background-image: linear-gradient(90deg, $tours__icon-background-color 60%, transparent 60%);
   background-position-y: top;
   background-repeat: no-repeat;
   background-size: 100% 0.1rem;
