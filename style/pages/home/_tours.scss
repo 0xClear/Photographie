@@ -1,12 +1,15 @@
 @use "../../abstracts/" as *;
 
-.tours{
+$-tours-icon-size: 3rem;
+$-tours-animation-duration: 0.30s;
+
+.tours {
   background: $tours__background-color;
   position: relative;
   padding-bottom: 5rem;
 }
 
-%tours__before-and-after{
+%tours__before-and-after {
   bottom: 0;
   left: 0;
   right: 0;
@@ -21,123 +24,175 @@
 }
 
 @mixin -tours__before-and-after-stroke($color) {
-    /* Apply text stroke styles if supported by the browser  */
+  /* Apply text stroke styles if supported by the browser  */
 
   @supports(-webkit-text-stroke: 0.3px #{$color}) or (text-stroke: 0.3px #{$color}) {
     /* Apply text stroke to .tours::before pseudo-element */
-    -webkit-text-stroke: 0.3px #{$color} ;
+    -webkit-text-stroke: 0.3px #{$color};
     text-stroke: 0.3px #{$color};
     text-shadow: none;
   }
 }
 
-.tours::before{
+.tours::before {
   @extend %tours__before-and-after;
   @include -tours__before-and-after-stroke(#1affe1);
 }
 
 
-.tours::after{
+.tours::after {
   @extend %tours__before-and-after;
 
   @include -tours__before-and-after-stroke(transparent);
 }
 
-.tours__container{
+.tours__container {
   position: relative;
   z-index: 10;
   /* padding variabl included from mixins */
   @include make-container();
 }
 
-.tours-heading{
+.tours-heading {
   color: #fff;
-  text-transform: capitalize;
   text-align: center;
   padding-top: 4rem;
-  font-family: Helvetica;
+  font-family: "../../../fonts/Cinzel";
   font-size: 3rem;
-  font-weight: 400;
-  letter-spacing: 0.3rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
 }
 
-.tours__card-icon{
-  width: 2.6rem;
+.tours__card-icon {
+  width: $-tours-icon-size;
   display: block;
   color: #1affe1;
 }
 
-.tours__cards{
-  display: flex;
-}
-
-.tours__card{
-  width: 20%;
-  position: relative;
-  height: 16rem;
-  background: #1affe1;
-  overflow: hidden;
-
-}
-
-.tours__cards-icon-container{
-  background-color: $toures__icon-color;
+.tours__card-icon-container {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+    /* Set the initial transformation */
+
+  transform: translate(0, 0);
+
+  transition: transform $-tours-animation-duration ease-in-out;
+  /* Apply the following styles when hovering over the parent element with the class .tours__card */
+
+  .tours__card:hover & {
+       /* Move the element horizontally using a calculated value */
+    transform: translate(calc(50% - 1.5rem), 0);
+  }
+}
+
+.tours__cards {
+  display: flex;
+  padding-top: 4rem;
+}
+
+.tours__card {
+  width: 20%;
+  position: relative;
+  height: 20rem;
+  overflow: hidden;
+  border-radius: 0.4rem;
+
+  transform: scale(1);
+  transition: transform $-tours-animation-duration ease-in-out;
+  box-shadow: 0 0 0.1rem #4affe7;
+
+  &:hover{
+    transform: scale(1.1);
+  }
+
+
 
 }
 
-.tours__card-img{
+.tours__cards-icon-background {
+  background-color: $toures__icon-color;
+
+  /* Position the Element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: $-tours-icon-size;
+  width: 100%;
+  /* Initial transformation to move the element off the screeen */
+  transform: translate(calc(-100% + #{$-tours-icon-size}), 0);
+  transition: transform $-tours-animation-duration ease-in-out;
+
+  .tours__card:hover & {
+    /* Move the element back to its Original position */
+    transform: translate(0, 0);
+  }
+
+}
+
+.tours__card-img {
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  
+
   filter: brightness(80%);
 }
-.tours__card-content{
+
+.tours__card-content {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
 
   color: #fff;
-  padding: 0.7rem 0.5rem 0  0.5rem;
+  padding: 0.7rem 0.5rem 0 0.5rem;
 
   background-image: linear-gradient(180deg, transparent 0%, rgb(0, 0, 0, 0.25) 20%);
+  transition: transform $-tours-animation-duration ease-in-out;
+
+  transform: translate(0, calc(100% - 4.8rem ));
+
+  .tours__card:hover & {
+    transform: translate(0, 0);
+  }
 }
 
-.tours__card-heading{
+.tours__card-heading {
   font-size: 1rem;
-  text-transform: capitalize;
   margin-bottom: 0.5rem;
+  font-family: "../../../fonts/Cinzel";
+  font-weight: 500;
 
 }
 
-.tours__card-location{
+.tours__card-location {
   font-size: 1rem;
   margin-bottom: 0.4rem;
   display: flex;
 }
 
-.tours__card-location-icon{
+.tours__card-location-icon {
   font-size: 0.7rem;
+  color: $red-color-icon;
 }
 
-.tours__card-location-text{
+.tours__card-location-text {
   font-size: 0.6rem;
   font-weight: 700;
   line-height: 2rem;
   padding-left: 0.5rem;
 }
 
-.tours__card-description{
-  font-size: 0.7rem;
+.tours__card-description {
+  font-size: 0.6rem;
+  font-family: Helvetica ;
+  font-weight: 100;
 
-  background-image: linear-gradient(90deg, $color-secoundary-light 60%, transparent 60%);
+  background-image: linear-gradient(90deg, $red-color-icon 60%, transparent 60%);
   background-position-y: top;
   background-repeat: no-repeat;
-  background-size: 100% 0.25rem;
+  background-size: 100% 0.1rem;
   padding: 0.6rem 0rem
 }

@@ -15,16 +15,7 @@
 html {
   font-size: 100%;
   font-family: "cinzel", impact;
-}
-
-.icon {
-  fill: currentColor;
-  height: 2em;
-  vertical-align: middle;
-  position: relative;
-}
-
-/** Breakpoints */
+} /** Breakpoints */
 /*Larg*/
 /*medium*/
 /*small*/
@@ -33,6 +24,13 @@ html {
 /** 992px oder schmaler */
 /** 768px oder schmaler */
 /** 576px oder schmaler */
+.icon {
+  fill: currentColor;
+  height: 2em;
+  vertical-align: middle;
+  position: relative;
+}
+
 .container {
   max-width: 75rem;
   margin: 0px auto;
@@ -302,14 +300,14 @@ html {
   margin-top: 2rem;
 }
 .motivation__text {
-  color: #3d627a;
+  color: #3d7a77;
   margin-top: 0.5rem;
   font-size: 400;
   font-family: georgia;
 }
 .motivation__text-heading {
   margin-top: 4rem;
-  color: #3d627a;
+  color: #3d7a77;
   font-weight: 600;
 }
 @media (max-width: 48em) {
@@ -321,7 +319,7 @@ html {
   content: "";
   width: 4rem;
   height: 0.3rem;
-  background-color: #2685c5;
+  background-color: #00f2ff;
   display: block;
   margin-bottom: 0.5rem;
 }
@@ -329,7 +327,7 @@ html {
   .motivation__text-heading::before {
     width: 6rem;
     height: 0.2rem;
-    background-color: #2685c5;
+    background-color: #00f2ff;
   }
 }
 
@@ -438,4 +436,185 @@ html {
   border: 0.33rem solid rgba(36, 255, 218, 0.925);
   padding: 0.33rem;
   z-index: 10;
+}
+
+.tours {
+  background: #083a42;
+  position: relative;
+  padding-bottom: 5rem;
+}
+
+.tours::after, .tours::before {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "Muster UI";
+  position: absolute;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 10rem;
+  font-weight: bold;
+  color: #083a42;
+  text-shadow: 0 0 0.3px #fff;
+}
+
+.tours::before {
+  /* Apply text stroke styles if supported by the browser  */
+}
+@supports (-webkit-text-stroke: 0.3px #1affe1) or (text-stroke: 0.3px #1affe1) {
+  .tours::before {
+    /* Apply text stroke to .tours::before pseudo-element */
+    -webkit-text-stroke: 0.3px #1affe1;
+    text-stroke: 0.3px #1affe1;
+    text-shadow: none;
+  }
+}
+
+.tours::after {
+  /* Apply text stroke styles if supported by the browser  */
+}
+@supports (-webkit-text-stroke: 0.3px transparent) or (text-stroke: 0.3px transparent) {
+  .tours::after {
+    /* Apply text stroke to .tours::before pseudo-element */
+    -webkit-text-stroke: 0.3px transparent;
+    text-stroke: 0.3px transparent;
+    text-shadow: none;
+  }
+}
+
+.tours__container {
+  position: relative;
+  z-index: 10;
+  /* padding variabl included from mixins */
+  max-width: 75rem;
+  margin: 0px auto;
+  padding: 0 2rem;
+}
+.tours__container::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+@media (max-width: 36em) {
+  .tours__container {
+    padding: 0 1rem;
+  }
+}
+
+.tours-heading {
+  color: #fff;
+  text-transform: capitalize;
+  text-align: center;
+  padding-top: 4rem;
+  font-family: Helvetica;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 0.3rem;
+}
+
+.tours__card-icon {
+  width: 3rem;
+  display: block;
+  color: #1affe1;
+}
+
+.tours__card-icon-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Set the initial transformation */
+  transform: translate(0, 0);
+  transition: transform 1s ease-in-out;
+  /* Apply the following styles when hovering over the parent element with the class .tours__card */
+}
+.tours__card:hover .tours__card-icon-container {
+  /* Move the element horizontally using a calculated value */
+  transform: translate(calc(50% - 1.5rem), 0);
+}
+
+.tours__cards {
+  display: flex;
+}
+
+.tours__card {
+  width: 20%;
+  position: relative;
+  height: 20rem;
+  background: #1affe1;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.tours__cards-icon-background {
+  background-color: rgba(13, 190, 93, 0.9254901961);
+  /* Position the Element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3rem;
+  width: 100%;
+  /* Initial transformation to move the element off the screeen */
+  transform: translate(calc(-100% + 3rem), 0);
+  transition: 0.8s ease-in-out;
+}
+.tours__card:hover .tours__cards-icon-background {
+  /* Move the element back to its Original position */
+  transform: translate(0, 0);
+}
+
+.tours__card-img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: brightness(80%);
+}
+
+.tours__card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  padding: 0.7rem 0.5rem 0 0.5rem;
+  background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.25) 20%);
+  transition: transform 1s ease-in-out;
+  transform: translate(0, calc(100% - 5rem));
+}
+.tours__card:hover .tours__card-content {
+  transform: translate(0, 0);
+}
+
+.tours__card-heading {
+  font-size: 1rem;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+
+.tours__card-location {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+  display: flex;
+}
+
+.tours__card-location-icon {
+  font-size: 0.7rem;
+  color: rgba(255, 30, 30, 0.7019607843);
+}
+
+.tours__card-location-text {
+  font-size: 0.6rem;
+  font-weight: 700;
+  line-height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.tours__card-description {
+  font-size: 0.7rem;
+  background-image: linear-gradient(90deg, #00f2ff 60%, transparent 60%);
+  background-position-y: top;
+  background-repeat: no-repeat;
+  background-size: 100% 0.2rem;
+  padding: 0.6rem 0rem;
 }/*# sourceMappingURL=main.css.map */
