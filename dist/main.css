@@ -510,6 +510,11 @@ html {
     padding: 0 1rem;
   }
 }
+@media (max-width: 62em) {
+  .tours__container {
+    padding: 0;
+  }
+}
 
 .tours-heading {
   color: #fff;
@@ -531,8 +536,7 @@ html {
 }
 @media (max-width: 48em) {
   .tours-heading {
-    font-size: 1.3rem;
-    white-space: nowrap;
+    font-size: 1rem;
     font-weight: 600;
     background: linear-gradient(to right, #690c69, #16ffff);
     -webkit-background-clip: text;
