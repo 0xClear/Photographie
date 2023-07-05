@@ -6,7 +6,7 @@
 .story{
     position: relative;
     overflow: hidden;
-    padding: 3rem 0rem;
+    /*padding: 3rem 0rem;*/
 }
 
 .story__video{
@@ -16,6 +16,12 @@
     right: 0;
     top: 0;
     width: 100%;
+
+    @supports (object-fit:cover) and (object-position: center){
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
 }
 
 .story__video-colorize{
@@ -40,6 +46,13 @@
     font-weight: 600;
     letter-spacing: 0.21rem;
     text-align: center;
+    text-shadow: 0 0 0.1rem #000;
+
+    @media (max-width: $breakpoint-sm){
+        font-size: 1.2rem;
+        font-weight: 500;
+        padding: 1rem 0 2rem 0;
+    }
 }
 
 .story__container{
@@ -54,12 +67,21 @@
     font-family: helvetica;
     font-size: 1rem;
     font-weight: 100;
+    text-align: justify;
 
     column-count: 2;
     column-rule: 1px solid $color-secoundary-light;
     column-gap: 4rem;
     padding-bottom: 3rem;
+
+    @media (max-width: $breakpoint-sm){
+        column-count: 1;
+        text-align: left;
+        font-size: 0.6;
+        padding: 0;
+    }
 }
 .story__book{
     text-align: center;
+    padding: 2rem 0;
 }

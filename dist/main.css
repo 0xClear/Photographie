@@ -46,6 +46,7 @@ html {
   border: 1px solid #00f2ff;
   padding: 1.2rem 4rem;
   text-align: center;
+  display: inline-block;
 }
 .button:hover {
   color: #009199;
@@ -56,6 +57,7 @@ html {
 }
 .button-white:hover {
   color: rgb(223, 223, 223);
+  background-color: #183130;
   border: 1px solid #006166;
 }
 
@@ -706,7 +708,7 @@ html {
 .story {
   position: relative;
   overflow: hidden;
-  padding: 3rem 0rem;
+  /*padding: 3rem 0rem;*/
 }
 
 .story__video {
@@ -716,6 +718,13 @@ html {
   right: 0;
   top: 0;
   width: 100%;
+}
+@supports (object-fit: cover) and (object-position: center) {
+  .story__video {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
 }
 
 .story__video-colorize {
@@ -739,6 +748,14 @@ html {
   font-weight: 600;
   letter-spacing: 0.21rem;
   text-align: center;
+  text-shadow: 0 0 0.1rem #000;
+}
+@media (max-width: 48em) {
+  .story__heading {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 1rem 0 2rem 0;
+  }
 }
 
 .story__container {
@@ -765,14 +782,24 @@ html {
   font-family: helvetica;
   font-size: 1rem;
   font-weight: 100;
+  text-align: justify;
   column-count: 2;
   column-rule: 1px solid #00f2ff;
   column-gap: 4rem;
   padding-bottom: 3rem;
 }
+@media (max-width: 48em) {
+  .story__description {
+    column-count: 1;
+    text-align: left;
+    font-size: 0.6;
+    padding: 0;
+  }
+}
 
 .story__book {
   text-align: center;
+  padding: 2rem 0;
 }
 
 /*# sourceMappingURL=main.css.map */
