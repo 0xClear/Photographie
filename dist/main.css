@@ -51,14 +51,33 @@ html {
 .button:hover {
   color: #009199;
 }
+@media (max-width: 48em) {
+  .button {
+    color: rgb(223, 223, 223);
+  }
+  .button:hover {
+    border: 1px solid #00f2ff;
+  }
+}
 
 .button-white {
   color: #fff;
 }
 .button-white:hover {
   color: rgb(223, 223, 223);
-  background-color: #183130;
-  border: 1px solid #006166;
+  background-color: #012936;
+  /*border: 1px solid color.scale($color-secoundary-light, $blackness: 60%);*/
+  border: 1px solid #b3fbff;
+}
+@media (max-width: 48em) {
+  .button-white {
+    background-color: #006166;
+    border: 1px solid #b3fbff;
+  }
+  .button-white:hover {
+    background-color: #022937;
+    border: 1px solid #009199;
+  }
 }
 
 .container {
@@ -752,8 +771,8 @@ html {
 }
 @media (max-width: 48em) {
   .story__heading {
-    font-size: 1.2rem;
-    font-weight: 500;
+    font-size: 1.1rem;
+    font-weight: 600;
     padding: 1rem 0 2rem 0;
   }
 }

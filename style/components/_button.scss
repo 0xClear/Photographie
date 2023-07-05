@@ -1,7 +1,7 @@
 @use "../abstracts/" as *;
 @use "sass:color";
 
-.button{
+.button {
     color: #fff;
     font-family: "../../../fonts/Cinzel";
     font-weight: 600;
@@ -12,16 +12,35 @@
     padding: 1.2rem 4rem;
     text-align: center;
     display: inline-block;
-    &:hover{
+
+    &:hover {
         color: color.scale($color-secoundary-light, $blackness: 40%);
     }
-}
 
+    @media (max-width: $breakpoint-sm) {
+        color: rgb(223, 223, 223);
+
+        &:hover {
+
+            border: 1px solid $color-secoundary-light;
+        }
+    }
+}
 .button-white{
     color: #fff;
     &:hover{
         color: rgb(223, 223, 223);
-        background-color: color.scale($color-secoundary, $lightness: -60%);
-        border: 1px solid color.scale($color-secoundary-light, $blackness: 60%);
+        background-color: color.scale($color-secoundary-dark, $blackness: -10%);
+        /*border: 1px solid color.scale($color-secoundary-light, $blackness: 60%);*/
+        border: 1px solid  color.scale($color-secoundary-light, $lightness: 70%);
+    }
+
+    @media (max-width: $breakpoint-sm){
+        background-color: color.scale($color-secoundary-light, $blackness: 60%);
+        border: 1px solid  color.scale($color-secoundary-light, $lightness: 70%);
+        &:hover{
+            background-color: color.scale($color-secoundary-dark, $lightness: 5%);
+            border: 1px solid  color.scale($color-secoundary-light, $lightness: -40%);
+        }
     }
 }
