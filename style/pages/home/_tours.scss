@@ -126,7 +126,7 @@ $-tours-animation-duration: 0.30s;
 
 .tours__card {
   /* 0 0 mean whidth and heigh are not allowed to change */
-  flex: 0 0 ( 71rem / 5);
+  flex: 0 0 calc((71rem / 5));
   width: 20%;
   position: relative;
   height: 20rem;

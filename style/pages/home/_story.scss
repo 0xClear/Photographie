@@ -1,0 +1,65 @@
+@use "../../abstracts/" as *;
+@use "sass:color";
+
+
+
+.story{
+    position: relative;
+    overflow: hidden;
+    padding: 3rem 0rem;
+}
+
+.story__video{
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+.story__video-colorize{
+    position: absolute;
+    background-color: color.scale($color-secoundary, $alpha: -85%);
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.story__heading{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    font-family: "../../../fonts/Cinzel";
+    font-style: normal;
+    text-transform: capitalize;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.21rem;
+    text-align: center;
+}
+
+.story__container{
+    @include make-container;
+    position: relative;
+    z-index: 2;
+}
+
+.story__description{
+    margin: 0 auto;
+    color: #fff;
+    font-family: helvetica;
+    font-size: 1rem;
+    font-weight: 100;
+
+    column-count: 2;
+    column-rule: 1px solid $color-secoundary-light;
+    column-gap: 4rem;
+    padding-bottom: 3rem;
+}
+.story__book{
+    text-align: center;
+}

@@ -1,0 +1,25 @@
+@use "../abstracts/" as *;
+@use "sass:color";
+
+.button{
+    color: #fff;
+    font-family: "../../../fonts/Cinzel";
+    font-weight: 600;
+    text-transform: capitalize;
+    text-decoration: none;
+    border-radius: 10000rem;
+    border: 1px solid $color-secoundary-light;
+    padding: 1.2rem 4rem;
+    text-align: center;
+    &:hover{
+        color: color.scale($color-secoundary-light, $blackness: 40%);
+    }
+}
+
+.button-white{
+    color: #fff;
+    &:hover{
+        color: rgb(223, 223, 223);
+        border: 1px solid color.scale($color-secoundary-light, $blackness: 60%);
+    }
+}
