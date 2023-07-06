@@ -32,6 +32,11 @@
     left: 0;
     right: 0;
     bottom: 0;
+
+    @media (max-width: $breakpoint-sm){
+        position: absolute;
+        background-color: transparent;
+    }
 }
 
 .story__heading{
