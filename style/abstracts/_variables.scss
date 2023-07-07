@@ -1,4 +1,5 @@
 @use "sass:color";
+@use "sass:math";
 
 $color-primary: rgba(36, 255, 218, 0.925) !default;
 $toures__icon-color: #0dbe5dec !default;
@@ -8,6 +9,13 @@ $color-secoundary: #3d7a77 !default;
 $color-secoundary-light: #00f2ff !default;
 $color-secoundary-dark: #011820 !default;
 $green-color-icon: #1fff93 !default;
+
+/* $offers_border-width*/
+$offers_border-width: math.div(1rem, 16);
+$border_bottom-color: #3ca7b8 !default;
+$border_left-and-right-color: #3abbcf !default;
+
+$offers__margin: 1rem;
 /** Breakpoints */
 /*Larg*/
 $breakpoint-lg: 75em !default;
