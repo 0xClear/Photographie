@@ -738,6 +738,7 @@ html {
   right: 0;
   top: 0;
   width: 100%;
+  background-color: #011820;
 }
 @supports (object-fit: cover) and (object-position: center) {
   .story__video {
