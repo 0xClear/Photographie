@@ -15,9 +15,9 @@
 }
 .offers__card{
     box-shadow: 0.5rem 0.5rem 1.9rem #67578b;
-    flex: 1 0 100px;
+    flex: 1 0 0px;
+    padding: 0;
     margin: 0 $offers__margin;
-    padding: 2rem 0;
     border-top: $offers_border-width solid $color-secoundary-light;
     border-left: $offers_border-width solid $color-secoundary-light;
     border-right: $offers_border-width solid $color-secoundary-light;
@@ -37,4 +37,15 @@
     background-color: $border_bottom-color;
     border-left: $offers_border-width solid $border_left-and-right-color;
     border-right: $offers_border-width solid $border_left-and-right-color;
+}
+
+.offers__image-container{
+    margin: -$offers_border-width -$offers_border-width 0 -$offers_border-width;
+    background-color: $color-secoundary;
+}
+
+.offers__image{
+    width: 100%;
+    opacity: 70%;
+    mix-blend-mode: hard-light;
 }
