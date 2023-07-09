@@ -3,7 +3,7 @@ function checkScroll() {
   
     for (const video of videos) {
       const boundingRect = video.getBoundingClientRect();
-      const visible = boundingRect.top + boundingRect.height > 0 && boundingRect.top < window.innerHeight;
+      const visible = (boundingRect.top + boundingRect.height > 0 && boundingRect.top < window.innerHeight);
   
       if (visible) {
         video.play();
