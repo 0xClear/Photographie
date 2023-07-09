@@ -10,6 +10,9 @@ $color-secoundary-light: #00f2ff !default;
 $color-secoundary-dark: #011820 !default;
 $green-color-icon: #1fff93 !default;
 
+
+$slope-incline: math.asin(0.1);
+
 /* $offers_border-width*/
 $offers_border-width: math.div(1rem, 16);
 $border_bottom-color: #3ca7b8 !default;

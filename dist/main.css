@@ -117,7 +117,7 @@ html {
   right: 0;
   bottom: 0;
   height: 10vw;
-  background-image: linear-gradient(-5.71deg, #fff 49.9%, transparent 50.1%);
+  background-image: linear-gradient(-5.7391704773deg, #fff 49.9%, transparent 50.1%);
   background-size: 100vw 10vw;
   background-repeat: no-repeat;
   background-position: center 100%;
@@ -868,13 +868,36 @@ html {
 }
 
 .offers__image-container {
-  margin: -0.125rem -0.0625rem;
+  position: relative;
+  margin-top: -0.0625rem;
+  margin-left: -0.0625rem;
+  margin-right: -0.0625rem;
   background-color: #3d7a77;
 }
 
-.offers__image-container::after {
+.offers__image-container::before {
+  content: "";
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
   position: absolute;
-  background-image: linear-gradient(4deg, 50% #fff, 50% transparent);
+  border-right: 0.0625rem solid #3abbcf;
+  border-left: 0.0625rem solid #3abbcf;
+  border-top: 0.0625rem solid #3abbcf;
+}
+
+.offers__image-container::after {
+  content: "";
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 4rem;
+  position: absolute;
+  background-image: linear-gradient(-5.7391704773deg, white 49.8%, transparent 58.2%);
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
 }
 
 .offers__image {

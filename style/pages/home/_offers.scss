@@ -40,13 +40,38 @@
 }
 
 .offers__image-container{
-    margin: -$offers_border-width - $offers_border-width 0 - ($offers_border-width);
+    position: relative;
+    margin-top: -$offers_border-width;
+    margin-left: -$offers_border-width;
+    margin-right: -$offers_border-width;
     background-color: $color-secoundary;
 }
 
-.offers__image-container::after{
+.offers__image-container::before{
+    content: "";
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
     position: absolute;
-    background-image: linear-gradient(4deg, 50% #fff, 50% transparent);
+
+    border-right: $offers_border-width solid $border_left-and-right-color;
+    border-left: $offers_border-width solid $border_left-and-right-color;
+    border-top: $offers_border-width solid $border_left-and-right-color;
+
+}
+
+.offers__image-container::after{
+    content: "";
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 4rem;
+    position: absolute;
+    background-image: linear-gradient(-$slope-incline, white 49.8%, transparent 58.2%);
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
 }
 
 .offers__image{
