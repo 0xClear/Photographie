@@ -44,6 +44,11 @@
     background-color: $color-secoundary;
 }
 
+.offers__image-container::after{
+    position: absolute;
+    background-image: linear-gradient(4deg, 50% #fff, 50% transparent);
+}
+
 .offers__image{
     width: 100%;
     opacity: 70%;
