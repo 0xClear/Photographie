@@ -40,7 +40,7 @@
 }
 
 .offers__image-container{
-    margin: -$offers_border-width -$offers_border-width 0 -$offers_border-width;
+    margin: -$offers_border-width - $offers_border-width 0 - ($offers_border-width);
     background-color: $color-secoundary;
 }
 
