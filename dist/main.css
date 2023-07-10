@@ -46,7 +46,7 @@ html {
   text-decoration: none;
   border-radius: 10000rem;
   border: 1px solid #00f2ff;
-  padding: 1.2rem 4rem;
+  padding: 1rem 4rem;
   text-align: center;
   display: inline-block;
 }
@@ -80,6 +80,21 @@ html {
     background-color: #022937;
     border: 1px solid #009199;
   }
+}
+
+.button-secoundary-hover {
+  background-color: #011820;
+  border: 1px solid #3abbcf;
+}
+.button-secoundary-hover:hover {
+  mix-blend-mode: difference;
+  background-color: #24666f;
+  color: #ececec;
+}
+
+.button-slim-rm-padding {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .container {
@@ -928,7 +943,7 @@ html {
   margin-top: 1rem;
   border-top: 1px solid #3ca7b8;
   border-bottom: 1px solid #3ca7b8;
-  background-image: linear-gradient(90deg, transparent calc(50% - 0.03125rem), #3abbcf calc(50% - 0.03125rem), transparent calc(50% + 0.03125rem));
+  background-image: linear-gradient(90deg, transparent calc(50% - 0.03125rem), #3abbcf calc(50% - 0.03125rem), #3abbcf calc( 50% - 0.03125rem), transparent calc(50% + 0.03125rem));
   background-repeat: no-repeat;
   background-size: 100% 75%;
   background-position: center center;
@@ -961,6 +976,24 @@ html {
   font-size: 2rem;
   line-height: 2.3rem;
   letter-spacing: 0.1rem;
+}
+
+.offers__card-hover {
+  top: -0.0625rem;
+  left: -0.0625rem;
+  right: -0.0625rem;
+  bottom: -0.0625rem;
+  position: absolute;
+  background-color: #011820;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  background-image: linear-gradient(90deg, transparent calc(50% - 0.03125rem), #3abbcf calc(50% - 0.03125rem), #3abbcf calc( 50% - 0.03125rem), transparent calc(50% + 0.03125rem)), linear-gradient(45deg, #011820 0%, #045d7d 100%);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center top, center center;
+  background-size: 100% calc(50% - 4rem), 100% 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

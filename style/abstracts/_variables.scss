@@ -19,6 +19,8 @@ $offers_border-width: math.div(1rem, 16);
 $border_bottom-color: #3ca7b8 !default;
 $border_left-and-right-color: #3abbcf !default;
 
+$-half-pixel-width: math.div(1rem, 32);
+
 $offers__margin: 1rem;
 /** Breakpoints */
 /*Larg*/

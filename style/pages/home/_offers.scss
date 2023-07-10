@@ -1,5 +1,7 @@
 @use "../../abstracts/" as *;
 @use "sass:math";
+@use "sass:color";
+$-half-pixel-width: math.div(1rem, 32);
 
 .offers{
     min-height: 4rem;
@@ -98,7 +100,6 @@
 }
 
 .offers__content-info{
-    $-half-pixel-width: math.div(1rem, 32);
 
     display: flex;
     margin-top: 1rem;
@@ -108,6 +109,7 @@
     background-image: linear-gradient(90deg, 
     transparent calc(50% - #{$-half-pixel-width}),
     $border_left-and-right-color calc(50% - #{$-half-pixel-width}),
+    $border_left-and-right-color calc( 50% - #{$-half-pixel-width}),
     transparent calc(50% + #{$-half-pixel-width})
     
     );
@@ -150,4 +152,34 @@
     font-size: 2rem;
     line-height: 2.3rem;
     letter-spacing: 0.1rem;
+}
+
+.offers__card-hover{
+    top: -$offers_border-width;
+    left: -$offers_border-width;
+    right: -$offers_border-width;
+    bottom: -$offers_border-width;
+
+    position: absolute;
+    background-color: $color-secoundary-dark;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+
+    background-image: linear-gradient(90deg, 
+    transparent calc(50% - #{$-half-pixel-width}),
+    $border_left-and-right-color calc(50% - #{$-half-pixel-width}),
+    $border_left-and-right-color calc( 50% - #{$-half-pixel-width}),
+    transparent calc(50% + #{$-half-pixel-width})
+    
+    ), linear-gradient(45deg,
+        $color-secoundary-dark 0%,
+        color.scale($color-secoundary-dark, $lightness: 20%) 100%
+    );
+
+    background-repeat: no-repeat, no-repeat;
+    background-position: center top, center center;
+    background-size: 100% calc(50% - 4rem), 100% 100%;
 }

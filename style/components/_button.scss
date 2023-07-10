@@ -9,7 +9,7 @@
     text-decoration: none;
     border-radius: 10000rem;
     border: 1px solid $color-secoundary-light;
-    padding: 1.2rem 4rem;
+    padding: 1rem 4rem;
     text-align: center;
     display: inline-block;
 
@@ -43,4 +43,20 @@
             border: 1px solid  color.scale($color-secoundary-light, $lightness: -40%);
         }
     }
+}
+
+.button-secoundary-hover{
+    background-color: $color-secoundary-dark;
+    border: 1px solid $border_left-and-right-color;
+
+    &:hover{
+        mix-blend-mode: difference;
+        background-color: color.scale($color-element-darker, $lightness: -20%);
+        color: #ececec;
+    }
+}
+
+.button-slim-rm-padding{
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
