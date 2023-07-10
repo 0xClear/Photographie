@@ -847,7 +847,7 @@ html {
   box-shadow: 0.5rem 0.5rem 1.9rem #67578b;
   flex: 1 0 0px;
   /*  */
-  padding: 0 0 3rem 0;
+  padding: 0 0 2rem 0;
   margin: 0 1rem;
   border-top: 0.0625rem solid #00f2ff;
   border-left: 0.0625rem solid #00f2ff;
@@ -908,7 +908,7 @@ html {
 }
 
 .offers__content {
-  padding: 0 1rem 1rem 1rem;
+  padding: 0 2rem 0 2rem;
 }
 
 .offers__content-heading {
@@ -917,9 +917,10 @@ html {
 }
 
 .offers__content-heading-description {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   padding: 0.4rem 0 0.4rem 0;
   font-family: Arial, Helvetica;
+  color: #3abbcf;
 }
 
 .offers__content-info {
@@ -927,6 +928,10 @@ html {
   margin-top: 1rem;
   border-top: 1px solid #3ca7b8;
   border-bottom: 1px solid #3ca7b8;
+  background-image: linear-gradient(90deg, transparent calc(50% - 0.03125rem), #3abbcf calc(50% - 0.03125rem), transparent calc(50% + 0.03125rem));
+  background-repeat: no-repeat;
+  background-size: 100% 75%;
+  background-position: center center;
 }
 
 .offers__content-info-level, .offers__content-info-duration {
@@ -934,6 +939,28 @@ html {
   flex: 1 1 50%;
   color: #2d7f8b;
   text-align: center;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+.offers__content-info-duration-text {
+  padding-left: 0.5rem;
+}
+
+.offers__content-price-container {
+  padding-top: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: Arial, Helvetica;
+  color: #3d7a77;
+}
+
+.offers__content-price {
+  display: block;
+  color: #2d7f8b;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  letter-spacing: 0.1rem;
 }
 
 /*# sourceMappingURL=main.css.map */
