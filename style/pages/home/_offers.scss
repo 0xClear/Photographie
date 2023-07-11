@@ -10,8 +10,8 @@ $-half-pixel-width: math.div(1rem, 32);
 .offers__container{
     display: flex;
     flex-wrap: wrap;
-    margin-left: -$offers__margin;
-    margin-right: -$offers__margin;
+    margin-left: - $offers__margin;
+    margin-right: - $offers__margin;
     padding-top: 4rem;
     padding-bottom: 4rem;
 }
@@ -44,9 +44,9 @@ $-half-pixel-width: math.div(1rem, 32);
 
 .offers__image-container{
     position: relative;
-    margin-top: -$offers_border-width;
-    margin-left: -$offers_border-width;
-    margin-right: -$offers_border-width;
+    margin-top: - $offers_border-width;
+    margin-left: - $offers_border-width;
+    margin-right: - $offers_border-width;
     background-color: $color-secoundary;
 }
 
@@ -72,7 +72,7 @@ $-half-pixel-width: math.div(1rem, 32);
     bottom: 0;
     height: 4rem;
     position: absolute;
-    background-image: linear-gradient(-$slope-incline, white 49.8%, transparent 58.2%);
+    background-image: linear-gradient(-$slope-incline, white 49.8%, transparent 50.3%);
     background-repeat: no-repeat;
     background-position: 50% 100%;
 }
@@ -176,10 +176,16 @@ $-half-pixel-width: math.div(1rem, 32);
     
     ), linear-gradient(45deg,
         $color-secoundary-dark 0%,
-        color.scale($color-secoundary-dark, $lightness: 20%) 100%
+        color.scale($color-secoundary-dark, $lightness: 10%) 100%
     );
 
     background-repeat: no-repeat, no-repeat;
     background-position: center top, center center;
     background-size: 100% calc(50% - 4rem), 100% 100%;
+
+    opacity: 0;
+    transition: 1s ease-in-out;
+    &:hover{
+        opacity: 1;
+    }
 }

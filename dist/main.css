@@ -911,7 +911,7 @@ html {
   bottom: 0;
   height: 4rem;
   position: absolute;
-  background-image: linear-gradient(-5.7391704773deg, white 49.8%, transparent 58.2%);
+  background-image: linear-gradient(-5.7391704773deg, white 49.8%, transparent 50.3%);
   background-repeat: no-repeat;
   background-position: 50% 100%;
 }
@@ -990,10 +990,15 @@ html {
   justify-content: center;
   align-items: center;
   z-index: 2;
-  background-image: linear-gradient(90deg, transparent calc(50% - 0.03125rem), #3abbcf calc(50% - 0.03125rem), #3abbcf calc( 50% - 0.03125rem), transparent calc(50% + 0.03125rem)), linear-gradient(45deg, #011820 0%, #045d7d 100%);
+  background-image: linear-gradient(90deg, transparent calc(50% - 0.03125rem), #3abbcf calc(50% - 0.03125rem), #3abbcf calc( 50% - 0.03125rem), transparent calc(50% + 0.03125rem)), linear-gradient(45deg, #011820 0%, #023b4e 100%);
   background-repeat: no-repeat, no-repeat;
   background-position: center top, center center;
   background-size: 100% calc(50% - 4rem), 100% 100%;
+  opacity: 0;
+  transition: 1s ease-in-out;
+}
+.offers__card-hover:hover {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=main.css.map */
