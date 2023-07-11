@@ -952,14 +952,15 @@ html {
 .offers__content-info-level, .offers__content-info-duration {
   font-family: Arial, Helvetica;
   flex: 1 1 50%;
+  font-size: 0.8rem;
   color: #2d7f8b;
   text-align: center;
-  padding-top: 0.6rem;
-  padding-bottom: 0.6rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .offers__content-info-duration-text {
-  padding-left: 0.4rem;
+  padding-left: 0.3rem;
 }
 
 .offers__content-price-container {
