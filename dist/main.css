@@ -928,11 +928,16 @@ html {
   right: 0;
   left: 0;
   bottom: 0;
-  height: 5rem;
+  height: 4rem;
   position: absolute;
   background-image: linear-gradient(-5.7391704773deg, white 49.8%, transparent 50.3%);
   background-repeat: no-repeat;
   background-position: 50% 100%;
+}
+@media (max-width: 62em) {
+  .offers__image-container::after {
+    height: 5rem;
+  }
 }
 
 .offers__image {
