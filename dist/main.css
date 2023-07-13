@@ -865,8 +865,23 @@ html {
   }
 }
 
-.offers__card {
+.offers__card-container {
   width: calc(33.3333333333% - 2rem);
+}
+@media (max-width: 75em) {
+  .offers__card-container {
+    margin-top: 0.5rem;
+    width: calc(50% - 2rem);
+  }
+}
+@media (max-width: 48em) {
+  .offers__card-container {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+
+.offers__card {
   box-shadow: 0.5rem 0.5rem 1.9rem #67578b;
   /*  */
   padding: 0 0 2rem 0;
@@ -875,18 +890,6 @@ html {
   border-left: 0.0625rem solid #00f2ff;
   border-right: 0.0625rem solid #00f2ff;
   position: relative;
-}
-@media (max-width: 75em) {
-  .offers__card {
-    margin-top: 0.5rem;
-    width: calc(50% - 2rem);
-  }
-}
-@media (max-width: 48em) {
-  .offers__card {
-    width: 100%;
-    margin-top: 0.5rem;
-  }
 }
 
 .offers__card::after {
