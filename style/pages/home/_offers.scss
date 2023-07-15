@@ -41,7 +41,7 @@ $-half-pixel-width: math.div(1rem, 32);
 .offers__card{
     box-shadow: 0.5rem 0.5rem 1.9rem #67578b;
 /*  */
-    padding: 0 0 2rem 0;
+
     margin: 0 $offers__margin;
     border-top: $offers_border-width solid $color-secoundary-light;
     border-left: $offers_border-width solid $color-secoundary-light;
@@ -50,7 +50,11 @@ $-half-pixel-width: math.div(1rem, 32);
     position: relative;
 }
 
-.offers__card::after{
+.offers__card-primary{
+    padding: 0 0 2rem 0;
+}
+
+.offers__card-primary::after{
     position: absolute;
     display: block;
     content: "";
