@@ -1035,4 +1035,14 @@ html {
   opacity: 1;
 }
 
+.offers__card-container--flip {
+  perspective: 800px;
+}
+.offers__card-container--flip .offers__card {
+  transition: transform 1s ease-in-out;
+}
+.offers__card-container--flip:hover .offers__card {
+  transform: rotateY(180deg);
+}
+
 /*# sourceMappingURL=main.css.map */

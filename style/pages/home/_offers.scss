@@ -223,3 +223,14 @@ $-half-pixel-width: math.div(1rem, 32);
         opacity: 1;
     }
 }
+
+.offers__card-container--flip{
+    perspective: 800px;
+    .offers__card{
+        transition: transform 1s ease-in-out;
+    }
+
+    &:hover .offers__card{
+        transform: rotateY(180deg);
+    }
+}
