@@ -219,13 +219,15 @@ $-half-pixel-width: math.div(1rem, 32);
 
     opacity: 0;
     transition: 1s ease-in-out;
-    &:hover{
+
+    .offers__card:hover & {
         opacity: 1;
     }
 }
 
 .offers__card-container--flip{
     perspective: 50rem;
+
     .offers__card{
         transition: transform 1s ease-in-out;
         transform-style: preserve-3d;
@@ -238,12 +240,13 @@ $-half-pixel-width: math.div(1rem, 32);
     .offers__card-primary{
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
-        transform: rotateX(0deg);
+        transform: rotateY(0deg);
     }
 
     .offers__card-hover{
-        transform: rotateX(180deg);
+        transform: rotateY(180deg);
         opacity: 1;
+
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
     }
