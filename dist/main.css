@@ -1057,4 +1057,15 @@ html {
   backface-visibility: hidden;
 }
 
+.offers__card-container-3d {
+  perspective: 800px;
+  /* Add the "mouse-position-css" class to the elements you want to apply this transformation */
+}
+.offers__card-container-3d .offers__card-hover {
+  display: none;
+}
+.offers__card-container-3d .offers__card {
+  transform: rotateX(calc((var(--mouse-y, 0.5) - 0.5) * 20deg));
+}
+
 /*# sourceMappingURL=main.css.map */

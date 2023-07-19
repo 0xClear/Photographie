@@ -1,7 +1,7 @@
 "use strict";
 
 function addMousePositionToCss() {
-  const elements = document.querySelectorAll(".mouse-position-css");
+  const elements = document.querySelectorAll(".offers__card-container");
   for (const element of elements) {
     element.addEventListener("mousemove", function (e) {
       var rect = element.getBoundingClientRect();

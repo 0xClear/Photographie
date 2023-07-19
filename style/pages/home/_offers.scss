@@ -251,3 +251,15 @@ $-half-pixel-width: math.div(1rem, 32);
         backface-visibility: hidden;
     }
 }
+
+.offers__card-container-3d{
+    perspective: 800px;
+
+    .offers__card-hover{
+        display: none;
+    }/* Add the "mouse-position-css" class to the elements you want to apply this transformation */
+.offers__card{
+    transform: rotateX(calc(calc(var(--mouse-y, 0.5) - 0.5) * 20deg));
+
+    }
+}
