@@ -1024,7 +1024,7 @@ html {
   justify-content: center;
   align-items: center;
   z-index: 2;
-  background-image: linear-gradient(90deg, transparent calc(50% - 0.03125rem), #3abbcf calc(50% - 0.03125rem), #3abbcf calc( 50% - 0.03125rem), transparent calc(50% + 0.03125rem)), linear-gradient(45deg, #011820 0%, #023b4e 100%);
+  background-image: linear-gradient(90deg, transparent calc(50% - 0.03125rem), #3abbcf calc(50% - 0.03125rem), #3abbcf calc( 50% - 0.03125rem), transparent calc(50% + 0.03125rem)), linear-gradient(45deg, #011820 0%, #045d7d 100%);
   background-repeat: no-repeat, no-repeat;
   background-position: center top, center center;
   background-size: 100% calc(50% - 4rem), 100% 100%;
@@ -1057,15 +1057,33 @@ html {
   backface-visibility: hidden;
 }
 
-.offers__card-container-3d {
+.offers__card-container-3d-hover, .offers__card-container-3d {
   perspective: 800px;
+}
+.offers__card-container-3d-hover .offers__card, .offers__card-container-3d .offers__card {
+  transition: transform 0.5s ease-in-out;
+  transform: rotateX(calc((var(--mouse-y, 0.5) - 0.5) * -20deg)) rotateY(calc((var(--mouse-x, 0.5) - 0.5) * 20deg));
+}
+.offers__card-container-3d-hover:hover .offers__card, .offers__card-container-3d:hover .offers__card {
+  transition: transform 0.1s linear;
+}
+
+.offers__card-container-3d {
   /* Add the "mouse-position-css" class to the elements you want to apply this transformation */
 }
 .offers__card-container-3d .offers__card-hover {
   display: none;
 }
-.offers__card-container-3d .offers__card {
-  transform: rotateX(calc((var(--mouse-y, 0.5) - 0.5) * 20deg));
+
+.offers__card-container-3d-hover .offers__card-primary {
+  transform-style: preserve-3d;
+}
+.offers__card-container-3d-hover .offers__card {
+  transform-style: preserve-3d;
+}
+.offers__card-container-3d-hover .offers__card-hover {
+  background-color: transparent;
+  background-image: linear-gradient(90deg, transparent calc(50% - 0.03125rem), #3abbcf calc(50% - 0.03125rem), #3abbcf calc( 50% - 0.03125rem), transparent calc(50% + 0.03125rem)), linear-gradient(45deg, rgba(1, 24, 32, 0.75) 0%, rgba(4, 93, 125, 0.75) 100%);
 }
 
 /*# sourceMappingURL=main.css.map */
