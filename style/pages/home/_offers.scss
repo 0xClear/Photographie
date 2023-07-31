@@ -281,12 +281,20 @@ $-half-pixel-width: math.div(1rem, 32);
 
     .offers__card-primary{
         transform-style: preserve-3d;
+        filter: blur(0rem);
+        transition: filter 0.9s ease-in-out;
     }
     .offers__card{
         transform-style: preserve-3d;
     }
     .offers__card-hover{
         background-color: transparent;
-        @include offers__card-hover-bg(-25%);
+        @include offers__card-hover-bg(-90%);
+
+        transform: translateX(0.1rem);
+    }
+
+    &:hover .offers__card-primary{
+        filter: blur(0.5rem);
     }
 }
