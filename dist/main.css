@@ -1092,4 +1092,28 @@ html {
   filter: blur(0.5rem);
 }
 
+.gallery {
+  max-width: 75rem;
+  margin: 0px auto;
+  padding: 0 2rem;
+  font-family: Helvetica, sans-serif;
+  margin-top: 2rem;
+}
+.gallery::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+@media (max-width: 36em) {
+  .gallery {
+    padding: 0 1rem;
+  }
+}
+
+.gallery__heading {
+  text-align: center;
+  padding-top: 5rem;
+  font-size: 3rem;
+}
+
 /*# sourceMappingURL=main.css.map */

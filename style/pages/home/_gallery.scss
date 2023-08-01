@@ -1,0 +1,13 @@
+@use "../../abstracts/" as *;
+
+.gallery{
+    @include make-container;
+    font-family: Helvetica, sans-serif;
+    margin-top: 2rem;
+}
+
+.gallery__heading{
+    text-align: center;
+    padding-top: 5rem;
+    font-size: 3rem;
+}
