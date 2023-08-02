@@ -5,49 +5,81 @@
 .gallery{
     font-family: Helvetica, sans-serif;
     margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
-.gallery__heading{
+.gallery__heading{        
+    color: #fff;
+    text-align: center;
     padding-top: 2rem;
     padding-bottom: 2rem;
-
     font-family: "../../../fonts/Cinzel";
-    font-style: normal;
-    text-transform: capitalize;
-    font-size: 2rem;
-    color: $color-secoundary-dark;
+    font-size: min(calc(100vw / 3), 2.8rem);
     font-weight: 600;
-    letter-spacing: 0.21rem;
-    text-align: center;
-    text-shadow: 0 0 0.1rem #000;
-
+    letter-spacing: 0.2rem;
+  
+    background: linear-gradient(to right, #ac9be2, #1a0947);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+    @media (max-width: $breakpoint-md){
+      font-size: 2rem;
+      font-weight: 600;
+    }
+  
     @media (max-width: $breakpoint-sm){
-        font-size: 1.1rem;
-        font-weight: 600;
-        padding: 1rem 0 2rem 0;
+      font-size: 1rem;
+      font-weight: 600;
+  
+      background: linear-gradient(to right, #690c69, #16ffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 }
+  
 
 .gallery__container{
     @include make-container;
 }
 
 .gallery__list{
+    $column-size: 71rem / 5;
+
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    grid-template-rows: #{$column-size} #{$column-size};
+
+    @media(max-width: $breakpoint-md){
+        grid-template-rows: #{$column-size * 0.8} #{$column-size * 0.8};
+    }
+    @media(max-width: $breakpoint-sm){
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: #{$column-size * 0.7} #{$column-size * 0.7};
+    }
 }
 
 .gallery__list-items{
     display: block;
+
+    &--first{
+        grid-column-start: 1;
+        grid-column-end: span 2;
+
+        grid-row-start: 1;
+        grid-row-end: span 2;
+    }
 }
 .gallery__list-image{
     display: block;
     width: 100%;
-}
-.gallery__list--first{
-    grid-column-start: 1;
-    grid-column-end: span 2;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    transition: scale 0.5s ease-in-out;
 
-    grid-row-start: 1;
-    grid-row-end: span 2;
+    &:hover{
+        scale: 1.1;
+        transition: scale 0.5s ease-in-out;
+    }
 }
