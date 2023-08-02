@@ -1156,7 +1156,7 @@ html {
 @media (max-width: 48em) {
   .gallery__list {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 9.94rem 9.94rem;
+    grid-template-rows: 14.2rem 14.2rem 14.2rem 14.2rem 14.2rem;
   }
 }
 

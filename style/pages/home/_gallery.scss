@@ -1,5 +1,6 @@
 @use "../../abstracts/" as *;
 @use "sass:color";
+@use "sass:math";
 
 
 .gallery{
@@ -43,7 +44,7 @@
 }
 
 .gallery__list{
-    $column-size: 71rem / 5;
+    $column-size: math.div(71rem, 5);
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -55,7 +56,7 @@
     }
     @media(max-width: $breakpoint-sm){
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: #{$column-size * 0.7} #{$column-size * 0.7};
+        grid-template-rows: #{$column-size} #{$column-size} #{$column-size} #{$column-size} #{$column-size};
     }
 }
 
