@@ -1,13 +1,33 @@
 @use "../../abstracts/" as *;
+@use "sass:color";
+
 
 .gallery{
-    @include make-container;
     font-family: Helvetica, sans-serif;
     margin-top: 2rem;
 }
 
 .gallery__heading{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    font-family: "../../../fonts/Cinzel";
+    font-style: normal;
+    text-transform: capitalize;
+    font-size: 2rem;
+    color: $color-secoundary-dark;
+    font-weight: 600;
+    letter-spacing: 0.21rem;
     text-align: center;
-    padding-top: 5rem;
-    font-size: 3rem;
+    text-shadow: 0 0 0.1rem #000;
+
+    @media (max-width: $breakpoint-sm){
+        font-size: 1.1rem;
+        font-weight: 600;
+        padding: 1rem 0 2rem 0;
+    }
+}
+
+.gallery__container{
+    @include make-container;
 }

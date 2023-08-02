@@ -1093,27 +1093,45 @@ html {
 }
 
 .gallery {
-  max-width: 75rem;
-  margin: 0px auto;
-  padding: 0 2rem;
   font-family: Helvetica, sans-serif;
   margin-top: 2rem;
 }
-.gallery::after {
+
+.gallery__heading {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-family: "../../../fonts/Cinzel";
+  font-style: normal;
+  text-transform: capitalize;
+  font-size: 2rem;
+  color: #011820;
+  font-weight: 600;
+  letter-spacing: 0.21rem;
+  text-align: center;
+  text-shadow: 0 0 0.1rem #000;
+}
+@media (max-width: 48em) {
+  .gallery__heading {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 1rem 0 2rem 0;
+  }
+}
+
+.gallery__container {
+  max-width: 75rem;
+  margin: 0px auto;
+  padding: 0 2rem;
+}
+.gallery__container::after {
   display: block;
   content: "";
   clear: both;
 }
 @media (max-width: 36em) {
-  .gallery {
+  .gallery__container {
     padding: 0 1rem;
   }
-}
-
-.gallery__heading {
-  text-align: center;
-  padding-top: 5rem;
-  font-size: 3rem;
 }
 
 /*# sourceMappingURL=main.css.map */
