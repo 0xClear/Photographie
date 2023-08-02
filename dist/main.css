@@ -1134,4 +1134,25 @@ html {
   }
 }
 
+.gallery__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.gallery__list-items {
+  display: block;
+}
+
+.gallery__list-image {
+  display: block;
+  width: 100%;
+}
+
+.gallery__list--first {
+  grid-column-start: 1;
+  grid-column-end: span 2;
+  grid-row-start: 1;
+  grid-row-end: span 2;
+}
+
 /*# sourceMappingURL=main.css.map */
