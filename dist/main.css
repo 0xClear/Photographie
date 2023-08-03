@@ -97,6 +97,10 @@ html {
   padding-right: 2rem;
 }
 
+.button-dark {
+  color: #000000;
+}
+
 .container {
   max-width: 75rem;
   margin: 0px auto;
@@ -1204,6 +1208,10 @@ html {
 .gallery__list-image:hover {
   scale: 1.2;
   transition: scale 0.5s ease-in-out;
+}
+
+.gallery__list-cb-toggle {
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */
