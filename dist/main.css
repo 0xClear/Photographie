@@ -98,7 +98,7 @@ html {
 }
 
 .button-dark {
-  color: #000000;
+  color: #3dacbc;
 }
 
 .container {
@@ -1098,8 +1098,7 @@ html {
 
 .gallery {
   font-family: Helvetica, sans-serif;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  padding-bottom: 3rem;
 }
 
 .gallery__heading {
@@ -1151,7 +1150,6 @@ html {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 14.2rem 14.2rem;
-  padding-bottom: 3rem;
 }
 @media (max-width: 62em) {
   .gallery__list {
@@ -1215,6 +1213,18 @@ html {
   transition: transform 1s ease-in;
 }
 .gallery_cb-toggle:not(:checked) ~ .gallery__list-cb-toggle {
+  display: none;
+}
+
+.gallery_cb-toggle {
+  display: none;
+}
+
+.gallery__cb-button-container {
+  padding-top: 2rem;
+  text-align: center;
+}
+.gallery_cb-toggle:checked ~ .gallery__cb-button-container {
   display: none;
 }
 

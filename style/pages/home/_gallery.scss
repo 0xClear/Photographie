@@ -5,8 +5,7 @@
 
 .gallery{
     font-family: Helvetica, sans-serif;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    padding-bottom: 3rem;
 }
 
 .gallery__heading{        
@@ -58,8 +57,6 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: #{$column-size} #{$column-size} #{$column-size} #{$column-size} #{$column-size};
     }
-
-    padding-bottom: 3rem;
 }
 
 .gallery__list-2{
@@ -117,4 +114,17 @@
     .gallery_cb-toggle:not(:checked) ~ &{
         display: none;
     }
+}
+
+.gallery_cb-toggle{
+    display: none;
+}
+
+.gallery__cb-button-container{
+    .gallery_cb-toggle:checked ~ & {
+        display: none;
+
+    }
+    padding-top: 2rem;
+    text-align: center;
 }

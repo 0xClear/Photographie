@@ -62,5 +62,5 @@
 }
 
 .button-dark{
-    color: #000000;
+    color: color.scale($color-element-darker, $lightness: 20%);
 }
