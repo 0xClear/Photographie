@@ -370,10 +370,10 @@ html {
   margin-top: 2rem;
 }
 .motivation__text {
+  font-family: Helvetica;
   color: #3d7a77;
   margin-top: 0.5rem;
-  font-size: 400;
-  font-family: georgia;
+  font-size: 1rem;
 }
 .motivation__text-heading {
   margin-top: 4rem;
@@ -1151,6 +1151,7 @@ html {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 14.2rem 14.2rem;
+  padding-bottom: 3rem;
 }
 @media (max-width: 62em) {
   .gallery__list {
@@ -1211,6 +1212,9 @@ html {
 }
 
 .gallery__list-cb-toggle {
+  transition: transform 1s ease-in;
+}
+.gallery_cb-toggle:not(:checked) ~ .gallery__list-cb-toggle {
   display: none;
 }
 

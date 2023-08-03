@@ -58,6 +58,8 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: #{$column-size} #{$column-size} #{$column-size} #{$column-size} #{$column-size};
     }
+
+    padding-bottom: 3rem;
 }
 
 .gallery__list-2{
@@ -110,5 +112,9 @@
 }
 
 .gallery__list-cb-toggle{
-    display: none;
+    transition: transform 1s ease-in;
+
+    .gallery_cb-toggle:not(:checked) ~ &{
+        display: none;
+    }
 }
