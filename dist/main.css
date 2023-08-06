@@ -1166,8 +1166,9 @@ html {
 .gallery__list-items {
   position: relative;
   display: block;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0);
   filter: sepia(0.25) contrast(1.5) brightness(0.9) hue-rotate(-15deg);
-  transition: filter 0.1s ease-in-out;
+  transition: filter 0.5s, ease-in-out z-index 0.5s ease-in-out, opacity 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 .gallery__list-items::before {
   display: block;
@@ -1181,10 +1182,14 @@ html {
   content: "";
   mix-blend-mode: screen;
   opacity: 1;
-  transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 .gallery__list-items:hover {
+  box-shadow: 0 0 1rem rgb(0, 0, 0);
+  transition: filter 0.5s ease-in-out, z-index 0s linear, transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
   filter: sepia(1) contrast(1) brightness(1) hue-rotate(1);
+  transform: scale(1.1);
+  z-index: 1000;
 }
 .gallery__list-items:hover::before {
   opacity: 0;

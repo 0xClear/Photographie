@@ -60,10 +60,15 @@
 }
 
 .gallery__list-items{
+    $animation-duration-gallery: 0.5s;
     position: relative;
     display: block;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0);
     filter: sepia(.25) contrast(1.5) brightness(.9) hue-rotate(-15deg);
-    transition: filter 0.1s ease-in-out;
+    transition: filter $animation-duration-gallery,
+    ease-in-out z-index $animation-duration-gallery ease-in-out,
+    opacity $animation-duration-gallery ease-in-out,
+    box-shadow $animation-duration-gallery ease-in-out;
 
     &::before{
         display: block;
@@ -77,10 +82,17 @@
         content: "";
         mix-blend-mode: screen;
         opacity: 1;
-        transition: opacity 0.1s ease-in-out;
+        transition: opacity $animation-duration-gallery ease-in-out;
     }
     &:hover{
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 1);
+        transition: filter $animation-duration-gallery ease-in-out,
+        z-index 0s linear,
+        transform $animation-duration-gallery ease-in-out,
+        box-shadow $animation-duration-gallery ease-in-out;
         filter: sepia(1) contrast(1) brightness(1) hue-rotate(1);
+        transform: scale(1.1);
+        z-index: 1000;
         &::before{
             opacity: 0;
         }
