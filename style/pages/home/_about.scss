@@ -1,5 +1,6 @@
 @use "../../abstracts/" as *;
 @use "sass:math";
+@use "sass:color";
 
 .about{
     padding-top: 4rem;
@@ -16,8 +17,76 @@
     overflow: hidden;
     float: left;
     object-fit: cover;
+    shape-outside: circle(50%);
+    margin-right: 2rem;
+
+    @media (max-width: $breakpoint-lg) {
+        width: $border-size * 0.8;
+        height: $border-size * 0.8;
+    }
+    /** 992px oder schmaler */
+    @media (max-width: $breakpoint-md) {
+        width: $border-size * 0.7;
+        height: $border-size * 0.7;
+    }
+    /** 768px oder schmaler */
+    @media (max-width: $breakpoint-sm) {
+        width: $border-size * 0.4;
+        height: $border-size * 0.4;
+    }
+    /** 576px oder schmaler */
+    @media (max-width: $breakpoint-xs) {
+        width: $border-size * 0.3;
+        height: $border-size * 0.3;
+    }
+}
+.about__heading{
+    margin-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    color: color.scale($color-secoundary, $lightness: 20%);
+    font-size: 2.5rem;
+    letter-spacing: 0.1em;
+    @media (max-width: $breakpoint-lg){
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 2rem;
+    }
+    @media (max-width: $breakpoint-md){
+        margin-top: 0.7rem;
+        padding-bottom: 0.7rem;
+        font-size: 2rem;
+    }
 }
 
 .about__text{
-    color: #cbcbcb;
+    padding-top: 2rem;
+    color: color.scale($color-secoundary, $lightness: -15%);
+    &::before{
+        display: inline-block;
+        content: "";
+        height: 0.25rem;
+        width: 6rem;
+        background-color: color.scale($color-secoundary, $lightness: 25%);
+        margin-left: 1rem;
+    }
+
+    @media(max-width: $breakpoint-lg){
+        padding-top: 0.5rem;
+    }
+    @media (max-width: $breakpoint-md){
+        padding-top: 1rem;
+    }
+}
+.about__description{
+    font-weight: 200;
+    margin-bottom: 1rem;
+}
+
+.about__quote{
+    &::before{
+        content: '"';
+    }
+    &::after{
+        content: "\"";
+    }
 }
