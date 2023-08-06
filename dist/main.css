@@ -1259,4 +1259,24 @@ html {
   transition: scale 0.5s ease-in-out;
 }
 
+.about {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  background-color: #011820;
+  font-family: Helvetica;
+}
+
+.about__image {
+  border-radius: 15rem;
+  width: 30rem;
+  height: 30rem;
+  overflow: hidden;
+  float: left;
+  object-fit: cover;
+}
+
+.about__text {
+  color: #cbcbcb;
+}
+
 /*# sourceMappingURL=main.css.map */
