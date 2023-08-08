@@ -366,6 +366,101 @@ html {
   border-bottom: none;
 }
 
+.footer {
+  background-color: #084f4f;
+  font-family: Helvetica, sans-serif;
+}
+
+.footer__container {
+  max-width: 75rem;
+  margin: 0px auto;
+  padding: 0 2rem;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: row;
+}
+.footer__container::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+@media (max-width: 36em) {
+  .footer__container {
+    padding: 0 1rem;
+  }
+}
+
+.footer__container-text {
+  flex: 0 0 50%;
+}
+
+.footer__logo-column {
+  flex: 0 0 50%;
+}
+
+.footer__container-heading {
+  color: #53a6a2;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.1em;
+  text-transform: uppercase;
+}
+@media (max-width: 75em) {
+  .footer__container-heading {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 62em) {
+  .footer__container-heading {
+    font-size: 3rem;
+  }
+}
+
+.footer__container-paragraph {
+  color: #53a6a2;
+  padding: 1rem 0;
+}
+
+.footer__container-contact {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.footer__container-contact-link {
+  position: absolute;
+  white-space: nowrap;
+  z-index: 1;
+  background-color: #1f8051;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  color: #fff;
+  text-decoration: none;
+  left: 2rem;
+  top: 0.4rem;
+  width: 18rem;
+  text-align: center;
+}
+
+.footer__container-contact-logo {
+  position: relative;
+  z-index: 3;
+  height: 5rem;
+  width: 5rem;
+  background-color: #1fb36b;
+  border-radius: 1000px;
+  text-align: center;
+  font-size: 1.6rem;
+  color: #084f4f;
+}
+.footer__container-contact-logo-mail {
+  line-height: 2.9em;
+}
+.footer__container-contact-logo-phone {
+  line-height: 3.4em;
+}
+
 .motivation {
   margin-top: 2rem;
 }

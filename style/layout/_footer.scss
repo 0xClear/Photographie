@@ -1,2 +1,79 @@
 @use "../abstracts/" as *;
 @use "sass:color";
+
+.footer{
+    background-color: $color-footer-bg;
+    font-family: Helvetica, sans-serif;
+}
+.footer__container{
+    @include make-container();
+    padding: 4rem 0;
+
+    display: flex;
+    flex-direction: row;
+}
+.footer__container-text{
+    flex: 0 0 50%;
+}
+.footer__logo-column{
+    flex: 0 0 50%;
+}
+
+.footer__container-heading{
+    color: color.scale($color-secoundary, $lightness: 20%);
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.1em;
+    text-transform: uppercase;
+    @media (max-width: $breakpoint-lg){
+        font-size: 3rem;
+    }
+    @media (max-width: $breakpoint-md){
+        font-size: 3rem;
+    }
+}
+
+.footer__container-paragraph{
+    color: color.scale($color-secoundary, $lightness: 20%);
+    padding: 1rem 0;
+}
+.footer__container-contact{
+    position: relative;
+    margin-bottom: 1rem;
+}
+.footer__container-contact-link{
+    position: absolute;
+    white-space: nowrap;
+    z-index: 1;
+    background-color: color.scale($green-color-icon, $blackness: 50%);
+    align-items: center;
+    padding: 1.5rem 2rem;
+
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color: #fff;
+    text-decoration: none;
+    left: 2rem;
+    top: 0.4rem;
+    width: 18rem;
+    text-align: center;
+}
+
+.footer__container-contact-logo{
+    position: relative;
+    z-index: 3;
+    height: 5rem;
+    width: 5rem;
+    background-color: color.scale($green-color-icon, $blackness: 30%);
+    border-radius: 1000px;
+    text-align: center;
+    font-size: 1.6rem;
+    color: $color-footer-bg;
+
+    &-mail{
+        line-height: 2.9em;
+    }
+    &-phone{
+        line-height: 3.4em;
+    }
+}
