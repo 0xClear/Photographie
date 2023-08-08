@@ -461,7 +461,7 @@ html {
   left: -100%;
   width: 100%;
   bottom: 0;
-  background-color: #1f734a;
+  background-color: #1fbf72;
   z-index: -1;
   transition: transform 0.5s ease-in-out;
 }
