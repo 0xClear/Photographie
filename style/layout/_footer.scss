@@ -106,7 +106,7 @@
     border-radius: 50%;
     color: #42b09e;
     font-size: 10rem;
-    background-color: color.scale($green-color-icon, $blackness: 50%);
+    background-image: linear-gradient(120deg, color.scale($color-primary, $blackness: 30%) 0%, $color-secoundary-dark 100%);
     padding: 1rem;
     box-shadow: 0 0 0.3rem #546d5c;
 }
@@ -114,7 +114,7 @@
     display: flex;
     justify-content: center;
     padding: 2rem;
-    border: 0.2rem solid #44b846;
+    border: 0.2rem solid #4ca161;
     border-radius: 50%;
 }
 .footer-svg-logo{

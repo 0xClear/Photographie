@@ -497,7 +497,7 @@ html {
   border-radius: 50%;
   color: #42b09e;
   font-size: 10rem;
-  background-color: #1f8051;
+  background-image: linear-gradient(120deg, rgba(36, 179, 154, 0.925) 0%, #011820 100%);
   padding: 1rem;
   box-shadow: 0 0 0.3rem #546d5c;
 }
@@ -506,7 +506,7 @@ html {
   display: flex;
   justify-content: center;
   padding: 2rem;
-  border: 0.2rem solid #44b846;
+  border: 0.2rem solid #4ca161;
   border-radius: 50%;
 }
 
