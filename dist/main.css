@@ -494,20 +494,24 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 15rem;
-  width: 15rem;
-  color: white;
-  font-size: 10rem;
-  z-index: 1;
-}
-.footer__logo-container::after {
-  z-index: -1;
-  position: absolute;
-  content: "";
-  height: 18rem;
-  width: 18rem;
   border-radius: 50%;
-  background-color: #1f995e;
+  color: #42b09e;
+  font-size: 10rem;
+  background-color: #1f8051;
+  padding: 1rem;
+  box-shadow: 0 0 0.3rem #546d5c;
+}
+
+.footer__logo-single-border {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  border: 0.2rem solid #44b846;
+  border-radius: 50%;
+}
+
+.footer-svg-logo {
+  color: #42b068;
 }
 
 .motivation {
