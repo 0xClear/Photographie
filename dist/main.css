@@ -407,6 +407,9 @@ html {
 
 .footer__logo-column {
   flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer__container-heading {
@@ -485,6 +488,26 @@ html {
 }
 .footer__container-contact-logo-phone {
   line-height: 3.4em;
+}
+
+.footer__logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15rem;
+  width: 15rem;
+  color: white;
+  font-size: 10rem;
+  z-index: 1;
+}
+.footer__logo-container::after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  height: 18rem;
+  width: 18rem;
+  border-radius: 50%;
+  background-color: #1f995e;
 }
 
 .motivation {
