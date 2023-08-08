@@ -7,8 +7,8 @@
 }
 .footer__container{
     @include make-container();
-    padding: 4rem 0;
-
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     display: flex;
     flex-direction: row;
 }
@@ -39,7 +39,7 @@
 }
 .footer__container-contact{
     position: relative;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 .footer__container-contact-link{
     position: absolute;
@@ -57,6 +57,24 @@
     top: 0.4rem;
     width: 18rem;
     text-align: center;
+    overflow: hidden;
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        bottom: 0;
+        background-color: color.scale($green-color-icon, $blackness: 55%);
+        z-index: -1;
+        transition: transform 0.5s ease-in-out;
+    }
+    &:hover{
+        &::after{
+            transform: translate(100%, 0);
+        }
+    }
 }
 
 .footer__container-contact-logo{
