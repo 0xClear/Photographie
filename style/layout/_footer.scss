@@ -29,7 +29,7 @@
     align-items: center;
     margin-left: 7rem;
     @media (max-width: $breakpoint-lg) {
-        margin-left: 0rem;
+        margin-left: 6rem;
     }
     @media(max-width: $breakpoint-sm){
         order: 1;
@@ -50,7 +50,6 @@
     }
     @media (max-width: $breakpoint-md){
         font-size: 3rem;
-        margin-top: 1rem;
     }
 }
 
@@ -129,16 +128,17 @@
     padding: 0.1em;
     box-shadow: 0 0 0.03em #546d5c;
     @media (max-width: $breakpoint-lg){
-        font-family: 9rem;
+        font-size: 9rem;
     }
     @media (max-width: $breakpoint-md) {
         font-size: 7rem;
     }
     @media (max-width: $breakpoint-sm){
-        font-family: 5rem;
+        font-size: 5rem;
+        margin: 1rem 0;
     }
     @media (max-width: $breakpoint-xs){
-        font-family: 4rem;
+        font-size: 4rem;
     }
 }
 .footer__logo-single-border{

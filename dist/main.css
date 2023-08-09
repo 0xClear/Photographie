@@ -424,7 +424,7 @@ html {
 }
 @media (max-width: 75em) {
   .footer__logo-column {
-    margin-left: 0rem;
+    margin-left: 6rem;
   }
 }
 @media (max-width: 48em) {
@@ -451,7 +451,6 @@ html {
 @media (max-width: 62em) {
   .footer__container-heading {
     font-size: 3rem;
-    margin-top: 1rem;
   }
 }
 
@@ -529,7 +528,7 @@ html {
 }
 @media (max-width: 75em) {
   .footer__logo-container {
-    font-family: 9rem;
+    font-size: 9rem;
   }
 }
 @media (max-width: 62em) {
@@ -539,12 +538,13 @@ html {
 }
 @media (max-width: 48em) {
   .footer__logo-container {
-    font-family: 5rem;
+    font-size: 5rem;
+    margin: 1rem 0;
   }
 }
 @media (max-width: 36em) {
   .footer__logo-container {
-    font-family: 4rem;
+    font-size: 4rem;
   }
 }
 
