@@ -2,15 +2,22 @@
 @use "sass:color";
 
 .footer{
+    display: flex;
     background-color: $color-footer-bg;
     font-family: Helvetica, sans-serif;
+
+    align-items: center;
+    flex-direction: column;
 }
 .footer__container{
-    @include make-container();
+
     padding-top: 2rem;
     padding-bottom: 2rem;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 0.2rem solid #87b69793;;
 
     @media (max-width: $breakpoint-sm){
         flex-direction: column;
@@ -150,4 +157,21 @@
 }
 .footer-svg-logo{
     color: #42b068;
+}
+
+.footer__footer-liste{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer__footer-links{
+    display: block;
+    color: #91caa493;
+    padding: 0.5rem 0.9rem;
+    text-decoration: none;
+    &:hover{
+        color: #b2e7c4c7;;
+    }
 }
