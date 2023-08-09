@@ -1665,4 +1665,18 @@ html {
   content: '"';
 }
 
+.booking__model {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(1, 24, 32, 0.92);
+}
+.booking__model:target {
+  display: block;
+}
+
 /*# sourceMappingURL=main.css.map */
