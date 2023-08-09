@@ -11,15 +11,31 @@
     padding-bottom: 2rem;
     display: flex;
     flex-direction: row;
+
+    @media (max-width: $breakpoint-sm){
+        flex-direction: column;
+    }
 }
 .footer__container-text{
-    flex: 0 0 50%;
+    flex: 0 0 auto;
+    @media (max-width: $breakpoint-sm) {
+        order: 2;
+    }
 }
 .footer__logo-column{
-    flex: 0 0 50%;
+    flex: 0 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 7rem;
+    @media (max-width: $breakpoint-lg) {
+        margin-left: 0rem;
+    }
+    @media(max-width: $breakpoint-sm){
+        order: 1;
+        justify-content: start;
+        margin-left: 0rem;
+    }
 }
 
 .footer__container-heading{
@@ -28,17 +44,20 @@
     font-weight: 700;
     line-height: 1.1em;
     text-transform: uppercase;
+    max-width: 30rem;
     @media (max-width: $breakpoint-lg){
         font-size: 3rem;
     }
     @media (max-width: $breakpoint-md){
         font-size: 3rem;
+        margin-top: 1rem;
     }
 }
 
 .footer__container-paragraph{
     color: color.scale($color-secoundary, $lightness: 20%);
     padding: 1rem 0;
+    font-size: 0.7em;
 }
 .footer__container-contact{
     position: relative;
@@ -107,14 +126,26 @@
     color: #42b09e;
     font-size: 10rem;
     background-image: linear-gradient(120deg, color.scale($color-primary, $blackness: 30%) 0%, $color-secoundary-dark 100%);
-    padding: 1rem;
-    box-shadow: 0 0 0.3rem #546d5c;
+    padding: 0.1em;
+    box-shadow: 0 0 0.03em #546d5c;
+    @media (max-width: $breakpoint-lg){
+        font-family: 9rem;
+    }
+    @media (max-width: $breakpoint-md) {
+        font-size: 7rem;
+    }
+    @media (max-width: $breakpoint-sm){
+        font-family: 5rem;
+    }
+    @media (max-width: $breakpoint-xs){
+        font-family: 4rem;
+    }
 }
 .footer__logo-single-border{
     display: flex;
     justify-content: center;
-    padding: 2rem;
-    border: 0.2rem solid #4ca161;
+    padding: 0.2em;
+    border: 0.03em solid #4ca161;
     border-radius: 50%;
 }
 .footer-svg-logo{
