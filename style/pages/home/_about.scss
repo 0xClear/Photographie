@@ -130,7 +130,7 @@
     @media (max-width: $breakpoint-md){
         margin-top: 0.7rem;
         padding-bottom: 0.7rem;
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 }
 
@@ -151,6 +151,13 @@
     }
     @media (max-width: $breakpoint-md){
         padding-top: 1rem;
+    }
+    @media (max-width: $breakpoint-sm){
+        &::before{
+            margin-left: 0.1rem;
+            width: 4rem;
+            background-color: color.scale($color-secoundary-light, $lightness: 35%);
+        }
     }
 }
 .about__description{

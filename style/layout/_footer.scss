@@ -61,6 +61,7 @@
     line-height: 1.1em;
     text-transform: uppercase;
     max-width: 30rem;
+    text-shadow: 0 0 0.12rem #163653;
     @media (max-width: $breakpoint-lg){
         font-size: 3rem;
     }

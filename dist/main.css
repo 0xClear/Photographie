@@ -449,6 +449,7 @@ html {
   line-height: 1.1em;
   text-transform: uppercase;
   max-width: 30rem;
+  text-shadow: 0 0 0.12rem #163653;
 }
 @media (max-width: 75em) {
   .footer__container-heading {
@@ -1618,7 +1619,7 @@ html {
   .about__heading {
     margin-top: 0.7rem;
     padding-bottom: 0.7rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -1642,6 +1643,13 @@ html {
 @media (max-width: 62em) {
   .about__text {
     padding-top: 1rem;
+  }
+}
+@media (max-width: 48em) {
+  .about__text::before {
+    margin-left: 0.1rem;
+    width: 4rem;
+    background-color: #59f7ff;
   }
 }
 
