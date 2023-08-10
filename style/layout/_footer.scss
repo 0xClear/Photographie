@@ -171,7 +171,11 @@
     border-radius: 50%;
 }
 .footer-svg-logo{
-    color: #42b068;
+    color: #18a49b;
+    transition: color 0.5s ease-in-out;
+    &:hover{
+        color: #4ca161;
+    }
 }
 
 .footer__footer-liste{
