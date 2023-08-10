@@ -18,6 +18,7 @@
     color: aqua;
 }
 .booking__model-content{
+    position: relative;
     background-color: rgb(52, 74, 74);
     width: 50rem;
     height: 25rem;
@@ -30,4 +31,13 @@
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: center center, center center, center 30%;
     background-size: auto, auto, cover;
+}
+.booking__model-close{
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+
+    height: 2rem;
+    width: 2rem;
 }
