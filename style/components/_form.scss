@@ -74,15 +74,28 @@ $-form__input-border: 0.02rem;
 }
 
 .form__radio-items-white{
+    .form__radio-item-radio{
+        display: none;
+    }
     .form__radio-item-label::before{
         display: inline-block;
         position: relative;
         content: "";
-        width: 1.5em;
-        height: 1.5em;
+        width: 1.2em;
+        height: 1.2em;
         border: 0.1em solid $color-secoundary-light;
         border-radius: 10000px;
         top: 0.45em;
         margin-right: 0.5em;
+        background-image: radial-gradient(circle at center center,
+        color.scale($color-primary, $lightness:  -35% ), 50%, transparent 50%);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 0 0;
+
+        transition:  background 0.5s ease-in-out;
+    }
+    .form__radio-item-radio:checked ~ .form__radio-item-label::before{
+        background-size:  100% 100%;
     }
 }
