@@ -64,3 +64,19 @@
 .button-dark{
     color: color.scale($color-element-darker, $lightness: 20%);
 }
+
+.button-form{
+    font-family: inherit;
+    position: relative;
+    border: none;
+    left: 14rem;
+    bottom: -4.6rem;
+    padding: 0.99rem 1.5rem;
+    color: $color-secoundary-light;
+    background-color: color.scale($color-secoundary-light, $blackness: 35%);
+    box-shadow: 0 0 0.4rem $color-secoundary-dark;
+
+    &:hover{
+        color: color.scale($color-secoundary-dark, $alpha: -25%);
+    }
+}

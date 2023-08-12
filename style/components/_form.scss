@@ -63,7 +63,7 @@ $-form__input-border: 0.02rem;
     font-size: 1.1rem;
     padding-top: 0.4rem;
     color: color.scale($color-secoundary-light, $blackness: 30%);
-    transition: transform 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
     padding-left: 0.4em;
 /*    .form__radio-item-radio:checked ~ & {
         transform: scale(1.1);
@@ -93,7 +93,7 @@ $-form__input-border: 0.02rem;
         background-position: center center;
         background-size: 0 0;
 
-        transition:  background 0.5s ease-in-out;
+        transition:  background 0.5s ease-in-out, border 0.4s ease-in-out;
     }
     .form__radio-item-radio:checked ~ .form__radio-item-label::before{
         background-size:  100% 100%;

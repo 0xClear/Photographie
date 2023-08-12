@@ -101,6 +101,21 @@ html {
   color: #3dacbc;
 }
 
+.button-form {
+  font-family: inherit;
+  position: relative;
+  border: none;
+  left: 14rem;
+  bottom: -4.6rem;
+  padding: 0.99rem 1.5rem;
+  color: #00f2ff;
+  background-color: #009da6;
+  box-shadow: 0 0 0.4rem #011820;
+}
+.button-form:hover {
+  color: rgba(1, 24, 32, 0.75);
+}
+
 .form_horizontal {
   display: flex;
   flex-wrap: wrap;
@@ -159,7 +174,7 @@ html {
   font-size: 1.1rem;
   padding-top: 0.4rem;
   color: #00a9b3;
-  transition: transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
   padding-left: 0.4em;
   /*    .form__radio-item-radio:checked ~ & {
           transform: scale(1.1);
@@ -186,7 +201,7 @@ html {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 0 0;
-  transition: background 0.5s ease-in-out;
+  transition: background 0.5s ease-in-out, border 0.4s ease-in-out;
 }
 .form__radio-items-white .form__radio-item-radio:checked ~ .form__radio-item-label::before {
   background-size: 100% 100%;
