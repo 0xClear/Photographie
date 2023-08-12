@@ -156,10 +156,29 @@ html {
 
 .form__radio-item-label {
   display: inline-block;
-  font-size: 1.4rem;
-  padding-top: 0.5rem;
-  padding-left: 1rem;
+  font-size: 1.1rem;
+  padding-top: 0.4rem;
   color: #00a9b3;
+  transition: transform 0.3s ease-in-out;
+  padding-left: 0.4em;
+  /*    .form__radio-item-radio:checked ~ & {
+          transform: scale(1.1);
+          font-weight: bold;
+          font-size: 1rem;
+      }
+  */
+}
+
+.form__radio-items-white .form__radio-item-label::before {
+  display: inline-block;
+  position: relative;
+  content: "";
+  width: 1.5em;
+  height: 1.5em;
+  border: 0.1em solid #00f2ff;
+  border-radius: 10000px;
+  top: 0.45em;
+  margin-right: 0.5em;
 }
 
 .container {
