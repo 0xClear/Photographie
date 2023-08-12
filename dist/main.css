@@ -108,7 +108,6 @@ html {
 .form__group {
   position: relative;
   margin-bottom: 0.5rem;
-  width: 10rem;
 }
 
 .form__input {
@@ -116,14 +115,17 @@ html {
   border: 0.02rem groove #3d7a77;
   border-radius: 100px;
   color: #00f2ff;
-  padding: 0.7rem 1rem;
+  width: 12rem;
+  padding: 1rem 1rem;
+  font-size: 1.3rem;
 }
 
 .form__label {
   position: absolute;
-  top: 0;
+  top: 0.02rem;
   left: 0;
-  padding: 0.7rem 1rem;
+  padding: 1rem 1rem;
+  font-size: 1.2rem;
 }
 
 .container {
@@ -1744,6 +1746,7 @@ html {
   padding-top: 3.5rem;
   font-size: 1.5rem;
   font-weight: 500;
+  margin-bottom: 2rem;
 }
 
 /*# sourceMappingURL=main.css.map */
