@@ -1,0 +1,30 @@
+@use "../abstracts/" as * ;
+@use "sass:color";
+
+$-form__input-padding: 0.7rem 1rem;
+
+.form{
+    width: 100%;
+}
+
+.form__group{
+    position: relative;
+    margin-bottom: 0.5rem;
+    width: 10rem;
+}
+
+.form__input{
+    background: transparent;
+    border: 0.02rem groove $color-secoundary;
+    border-radius: 100px;
+    color: $color-secoundary-light;
+
+    padding: $-form__input-padding;
+}
+
+.form__label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: $-form__input-padding;
+}

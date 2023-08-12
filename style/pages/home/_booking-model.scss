@@ -1,7 +1,11 @@
 @use "../../abstracts/" as *; 
 @use "sass:color";
+@use "sass:math";
 
+$-booking__model-width: 50rem;
+$-booking__model-height: 25rem;
 .booking__model{
+    font-family: Helvetica;
     display: none;
     &:target{
         display: flex;
@@ -20,8 +24,9 @@
 .booking__model-content{
     position: relative;
     background-color: rgb(52, 74, 74);
-    width: 50rem;
-    height: 25rem;
+    width: $-booking__model-width ;
+    height: $-booking__model-height ;
+    padding-left: $-booking__model-width * 0.5;
     $model__content-bg: color.scale($color-secoundary-dark, $alpha: -15%);
 
     background-image:
@@ -50,7 +55,7 @@
     }
 }
 .booking__model-heading{
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
+    padding-top: 3.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
 }
