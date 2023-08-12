@@ -1,28 +1,37 @@
 @use "../abstracts/" as * ;
 @use "sass:color";
 
-$-form__input-padding: 1rem 1rem;
+$-form__input-padding: 0.8rem 1rem;
 $-form__input-border: 0.02rem;
 
-.form{
-    width: 100%;
+.form_horizontal{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .form__group{
     position: relative;
     margin-bottom: 1rem;
+    .form_horizontal > &{
+        margin-right: 0.7rem;
+        margin-bottom: 1rem;
+    }
 }
 
 .form__input{
     background: transparent;
-    border: $-form__input-border groove $color-secoundary;
+    border: $-form__input-border groove color.scale($color-secoundary-light, $lightness: -60% );
     border-radius: 100px;
     color: $color-secoundary-light;
     width: 12rem;
     padding: $-form__input-padding;
     font-size: 1.3rem;
+    box-shadow: 0 0 0.35rem $color-secoundary-dark;
     &:focus{
         outline: none; /*0.013rem solid color.scale($color-secoundary-light, $lightness: -55% );*/
+    }
+    &::placeholder{
+        color: transparent;
     }
 }
 
@@ -38,7 +47,8 @@ $-form__input-border: 0.02rem;
     will-change: transform;
     transition: transform 0.5s ease-in-out;
     /*class + ~ */
-    .form__input:focus ~ & {
-        transform: scale(0.60) translate(0.5rem, 4.4rem);
+    .form__input:focus ~ &,
+    .form__input[placeholder]:not(:placeholder-shown) ~ & {
+        transform: scale(0.60) translate(0.5rem, 4rem);
     }
 }
