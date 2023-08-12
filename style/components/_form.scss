@@ -10,7 +10,7 @@ $-form__input-border: 0.02rem;
 
 .form__group{
     position: relative;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .form__input{
@@ -21,12 +21,24 @@ $-form__input-border: 0.02rem;
     width: 12rem;
     padding: $-form__input-padding;
     font-size: 1.3rem;
+    &:focus{
+        outline: none; /*0.013rem solid color.scale($color-secoundary-light, $lightness: -55% );*/
+    }
 }
 
 .form__label{
     position: absolute;
     top: $-form__input-border;
     left: 0;
-    padding: $-form__input-padding;
+    margin: $-form__input-padding;
     font-size: 1.2rem;
+    transform: scale(1) translate(0, 0);
+    transform-origin: 0% 50%;
+
+    will-change: transform;
+    transition: transform 0.5s ease-in-out;
+    /*class + ~ */
+    .form__input:focus ~ & {
+        transform: scale(0.60) translate(0.5rem, 4.4rem);
+    }
 }
