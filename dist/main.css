@@ -148,6 +148,20 @@ html {
   transform: scale(0.6) translate(0.5rem, 4rem);
 }
 
+.form__radio-item-radio {
+  display: inline-block;
+  position: relative;
+  top: -0.125rem;
+}
+
+.form__radio-item-label {
+  display: inline-block;
+  font-size: 1.4rem;
+  padding-top: 0.5rem;
+  padding-left: 1rem;
+  color: #00a9b3;
+}
+
 .container {
   max-width: 75rem;
   margin: 0px auto;
