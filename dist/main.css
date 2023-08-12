@@ -103,10 +103,7 @@ html {
 
 .button-form {
   font-family: inherit;
-  position: relative;
   border: none;
-  left: 14rem;
-  bottom: -4.6rem;
   padding: 0.99rem 1.5rem;
   color: #00f2ff;
   background-color: #009da6;
@@ -1826,6 +1823,12 @@ html {
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 2rem;
+}
+
+.booking__model-form-submit-container {
+  text-align: right;
+  margin-right: 1.1rem;
+  margin-top: 4rem;
 }
 
 /*# sourceMappingURL=main.css.map */
