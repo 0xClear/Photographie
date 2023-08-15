@@ -1803,6 +1803,23 @@ html {
   box-shadow: 0 0 0.24rem #1affe0;
 }
 
+.booking__model-content {
+  animation-name: booking__model-content-anim-fed-right-to-left;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+}
+
+@keyframes booking__model-content-anim-fed-right-to-left {
+  0% {
+    transform: translate(calc(-50vh - 50rem), 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
 .booking__model-close {
   display: block;
   position: absolute;
@@ -1822,13 +1839,20 @@ html {
   padding-top: 3.5rem;
   font-size: 1.5rem;
   font-weight: 500;
-  margin-bottom: 2rem;
+  margin-bottom: 0.66rem;
 }
 
 .booking__model-form-submit-container {
   text-align: right;
   margin-right: 1.1rem;
-  margin-top: 4rem;
+  margin-top: 3rem;
+}
+
+.booking__model-form-heading {
+  font-size: 0.8rem;
+  font-weight: 200;
+  margin-bottom: 1rem;
+  padding-right: 0.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */
