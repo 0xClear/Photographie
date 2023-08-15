@@ -1,5 +1,7 @@
 "use strict"
 
+
+/*fix closebutton Booking__model-form-pop-up*/
 function BookingModelfixClose(){
     const elements = document.querySelectorAll(".booking__model-close");
     for(const element of elements){

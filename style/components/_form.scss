@@ -32,6 +32,7 @@ $-form__input-border: 0.02rem;
     }
     &::placeholder{
         color: transparent;
+        text-shadow: none;
     }
 }
 

@@ -29,8 +29,13 @@ $-booking__model-height: 25rem;
     position: relative;
     background-color: rgb(52, 74, 74);
     width: $-booking__model-width ;
-    height: $-booking__model-height ;
-    padding-left: $-booking__model-width * 0.48;
+    height: $-booking__model-height;
+
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: auto;
+
+    padding-left: calc(min(100vw, #{$-booking__model-width})  * 0.48 );
     $model__content-bg: color.scale($color-secoundary-dark, $alpha: -15%);
 
     background-image:
