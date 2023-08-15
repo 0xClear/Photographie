@@ -721,6 +721,7 @@ html {
   width: 20rem;
   border-radius: 1rem;
   background-color: rgb(5, 31, 47);
+  box-shadow: 0 0 0.7rem #084f5e;
 }
 
 .sidenav__close {
@@ -738,28 +739,27 @@ html {
 }
 
 .sidenav__nav {
-  margin-top: 8rem;
-  color: #0d7387;
-  margin-left: 2rem;
+  margin-top: 6rem;
+  margin-left: 1.5rem;
   margin-right: 1.5rem;
   list-style-type: none;
 }
 
 .sidenav__nav-link {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 500;
   display: block;
   text-decoration: none;
-  padding-bottom: 2rem;
-  color: #179ab4;
+  padding: 0.5rem 0.5rem;
+  color: #00b6bf;
   text-shadow: 0 0 0.1rem #04181d;
-  transform: scale(1);
-  transition: transform 0.2s ease-in-out, scale 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+  border-bottom: 0.001rem solid #426f78;
 }
 .sidenav__nav-link:hover {
-  transform: scale(1.1);
+  font-weight: 600;
   text-shadow: 0 0 0.3rem #000000;
-  color: #18a7c4;
+  color: #009da6;
 }
 
 .motivation {
