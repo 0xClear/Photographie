@@ -1,0 +1,12 @@
+@use "../abstracts/" as *;
+@use "sass:color";
+
+.sidenav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(18, 77, 77);
+    z-index: 400;
+}
