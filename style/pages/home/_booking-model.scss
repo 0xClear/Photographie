@@ -20,6 +20,10 @@ $-booking__model-height: 25rem;
     z-index: 1000;
     background-color: color.scale($color-secoundary-dark, $alpha: -8%);
     color: aqua;
+    @supports(backdrop-filter: blur(4rem)){
+        background-color: rgba(8, 74, 118, 0.2);
+        backdrop-filter: blur(4rem);
+    }
 }
 .booking__model-content{
     position: relative;

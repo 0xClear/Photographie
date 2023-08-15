@@ -1789,6 +1789,12 @@ html {
   justify-content: center;
   align-items: center;
 }
+@supports (backdrop-filter: blur(4rem)) {
+  .booking__model {
+    background-color: rgba(8, 74, 118, 0.2);
+    backdrop-filter: blur(4rem);
+  }
+}
 
 .booking__model-content {
   position: relative;
