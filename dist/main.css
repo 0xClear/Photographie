@@ -720,7 +720,7 @@ html {
   height: 35rem;
   width: 20rem;
   border-radius: 1rem;
-  background-color: rgb(5, 31, 47);
+  background-color: #011820;
   box-shadow: 0 0 0.7rem #084f5e;
 }
 
@@ -746,15 +746,15 @@ html {
 }
 
 .sidenav__nav-link {
-  font-size: 1.6rem;
   font-weight: 500;
+  font-size: 1.6rem;
   display: block;
   text-decoration: none;
   padding: 0.5rem 0.5rem;
   color: #00b6bf;
   text-shadow: 0 0 0.1rem #04181d;
   transition: color 0.2s ease-in-out, font-weight 0.2s ease-in-out;
-  border-bottom: 0.001rem solid #426f78;
+  border-bottom: 0.001rem solid rgba(82, 136, 147, 0.4039215686);
 }
 .sidenav__nav-link:hover {
   font-weight: 600;

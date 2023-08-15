@@ -22,7 +22,7 @@
     height: 35rem;
     width: 20rem;
     border-radius: 1rem;
-    background-color: rgb(5, 31, 47);
+    background-color: $color-secoundary-dark;
     box-shadow: 0 0 0.7rem #084f5e;
 }
 
@@ -49,15 +49,15 @@
     list-style-type: none;
 }
 .sidenav__nav-link{
-    font-size: 1.6rem;
     font-weight: 500;
+    font-size: 1.6rem;
     display: block;
     text-decoration: none;
     padding: 0.5rem 0.5rem;
     color: color.scale($color-secoundary-light, $blackness: 25%);
     text-shadow: 0 0 0.1rem #04181d;
     transition: color 0.2s ease-in-out, font-weight 0.2s ease-in-out;
-    border-bottom: 0.001rem solid #426f78;
+    border-bottom: 0.001rem solid #52889367;
     &:hover{
         font-weight: 600;
         text-shadow: 0 0 0.3rem #000000;
