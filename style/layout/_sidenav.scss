@@ -34,8 +34,8 @@
     right: 0;
 
     background-color: #136d7f60;
-    @supports(backdrop-filter: blur(2rem)){
-        backdrop-filter: blur(2rem);
+    @supports(backdrop-filter: blur(1.5rem)){
+        backdrop-filter: blur(1.5rem);
         background-color: #2696ad24;
     }
 

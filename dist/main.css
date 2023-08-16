@@ -5,19 +5,6 @@
   font-display: swap;
   src: url(../../fonts/Cinzel/static/Cinzel-Medium.ttf) format("truetype");
 }
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-/*font-family: 'cinzel', monospace;*/
-html {
-  font-size: 100%;
-  font-family: "cinzel", sans-serif;
-  text-transform: capitalize;
-}
-
 /* $offers_border-width*/
 /** Breakpoints */
 /*Larg*/
@@ -31,6 +18,29 @@ html {
 /*@mixin tours__heading-size(){
 
 }*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*font-family: 'cinzel', monospace;*/
+html {
+  font-size: 100%;
+  font-family: "cinzel", sans-serif;
+  text-transform: capitalize;
+}
+
+::-moz-selection {
+  color: #00f2ff;
+  background-color: rgba(10, 152, 74, 0.9254901961);
+}
+
+::selection {
+  color: #00f2ff;
+  background-color: rgba(10, 152, 74, 0.9254901961);
+}
+
 .icon {
   fill: currentColor;
   height: 2em;
@@ -733,9 +743,9 @@ html {
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
-@supports (backdrop-filter: blur(2rem)) {
+@supports (backdrop-filter: blur(1.5rem)) {
   .sidenav__background {
-    backdrop-filter: blur(2rem);
+    backdrop-filter: blur(1.5rem);
     background-color: rgba(38, 150, 173, 0.1411764706);
   }
 }
@@ -802,6 +812,9 @@ html {
 
 .sidenav__opened {
   display: none;
+}
+.sidenav__opened::after {
+  content: "test branch master";
 }
 
 .motivation {

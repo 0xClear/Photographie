@@ -1,3 +1,5 @@
+@use "../abstracts/" as *;
+@use "sass:color";
 *{
     padding: 0;
     margin: 0;
@@ -9,4 +11,17 @@ html{
     font-family: 'cinzel', sans-serif;
 
     text-transform: capitalize;
+}
+
+@mixin -generate-selection(){
+    color: $color-secoundary-light;
+    background-color: color.scale($toures__icon-color, $lightness: -20%);
+}
+
+::-moz-selection{
+    @include -generate-selection();
+}
+
+::selection{
+    @include -generate-selection();
 }
