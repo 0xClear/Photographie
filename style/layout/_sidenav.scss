@@ -106,4 +106,7 @@
 }
 .sidenav__opened{
     display: none;
+    &::after{
+        content: "test branch master";
+    }
 }
