@@ -708,6 +708,10 @@ html {
   left: 0;
   bottom: 0;
   z-index: 600;
+  pointer-events: none;
+}
+.sidenav__opened:checked ~ .sidenav {
+  pointer-events: all;
 }
 
 .sidenav__background {
@@ -742,10 +746,10 @@ html {
   background-color: #011820;
   box-shadow: 0 0 0.7rem #084f5e;
   transform: translate(100%, 0);
-}
-.sidenav__opened:checked ~ .sidenav .sidenav__container {
   will-change: transform;
   transition: transform 1s ease-in-out;
+}
+.sidenav__opened:checked ~ .sidenav .sidenav__container {
   transform: translate(0, 0);
 }
 
@@ -753,6 +757,7 @@ html {
   position: absolute;
   right: 1rem;
   top: 1rem;
+  display: block;
   cursor: pointer;
   color: transparent;
   z-index: 600;

@@ -10,6 +10,10 @@
     left: 0;
     bottom: 0;
     z-index: 600;
+    pointer-events: none;
+    .sidenav__opened:checked ~ &  {
+        pointer-events: all;
+    }
 }
 
 .sidenav__background{
@@ -45,9 +49,9 @@
     background-color: $color-secoundary-dark;
     box-shadow: 0 0 0.7rem #084f5e;
     transform: translate(100%, 0);
+    will-change: transform;
+    transition: transform 1s ease-in-out;
     .sidenav__opened:checked ~ .sidenav & {
-        will-change: transform;
-        transition: transform 1s ease-in-out;
         transform: translate(0, 0);
     }
 }
@@ -56,6 +60,7 @@
     position: absolute;
     right: 1rem;
     top: 1rem;
+    display: block;
     cursor: pointer;
     color: transparent;
     z-index: 600;
