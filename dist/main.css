@@ -1934,6 +1934,13 @@ html {
   background-size: auto, auto, cover;
   box-shadow: 0 0 0.24rem #1affe0;
 }
+@media (max-width: 48em) {
+  .booking__model-content {
+    background-image: none;
+    padding: 0.5rem 0.6rem;
+    background-color: #011820;
+  }
+}
 
 .booking__model-content {
   animation-name: booking__model-content-anim-fed-right-to-left;
@@ -1973,11 +1980,23 @@ html {
   font-weight: 500;
   margin-bottom: 0.66rem;
 }
+@media (max-width: 48em) {
+  .booking__model-heading {
+    padding-top: 1.5rem;
+    font-size: 1.2rem;
+    text-shadow: 0 0 0.2rem #000;
+  }
+}
 
 .booking__model-form-submit-container {
   text-align: right;
   margin-right: 1.1rem;
   margin-top: 3rem;
+}
+@media (max-width: 48em) {
+  .booking__model-form-submit-container {
+    margin-top: 0;
+  }
 }
 
 .booking__model-form-heading {
