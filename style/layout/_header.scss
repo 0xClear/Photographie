@@ -55,11 +55,14 @@ $image-path: "../assets/images";
 
 .header::before {
     top: 0;
+    background-size: cover;
     background-image: url(../assets/images/A_HeaderMountain02.png);
 }
 
 .header::after {
     height: 33vw;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-image: url(../assets/images/A_HeaderMountain01.png);
 }
 
